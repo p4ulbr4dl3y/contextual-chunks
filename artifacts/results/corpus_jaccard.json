@@ -1,0 +1,8 @@
+{
+  "chunks": 3134,
+  "documents": 82,
+  "adjacent_pairs": 3052,
+  "jaccard_median": 0.3141,
+  "jaccard_mean": 0.3443,
+  "jaccard_p90": 0.7164
+}
