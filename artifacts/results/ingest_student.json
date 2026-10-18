@@ -1,0 +1,65 @@
+{
+  "model": "/Users/yegor/.cache/contextual-chunks/mlx/qwen3-0.6b-contextual-chunks-bfloat16",
+  "load_sec": 1.04,
+  "chunks_sampled": 4,
+  "corpus_chunks": 3134,
+  "corpus_prompt_tokens": 24308045,
+  "prefill_sec_per_1k_tokens": 1.048,
+  "decode_sec_per_chunk": 3.297,
+  "est_prefill_hours": 7.08,
+  "est_total_hours": 9.95,
+  "samples": [
+    {
+      "chunk_index": 8,
+      "doc_id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin",
+      "prompt_tokens": 5193,
+      "window_tokens": 4830,
+      "out_tokens": 128,
+      "prefill_sec": 4.712,
+      "decode_sec": 2.774,
+      "total_sec": 7.486,
+      "prefill_tok_per_sec": 1102.1,
+      "decode_tok_per_sec": 46.1,
+      "context_chars": 366
+    },
+    {
+      "chunk_index": 4,
+      "doc_id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin",
+      "prompt_tokens": 8385,
+      "window_tokens": 7853,
+      "out_tokens": 128,
+      "prefill_sec": 8.946,
+      "decode_sec": 3.396,
+      "total_sec": 12.343,
+      "prefill_tok_per_sec": 937.2,
+      "decode_tok_per_sec": 37.7,
+      "context_chars": 378
+    },
+    {
+      "chunk_index": 1,
+      "doc_id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin",
+      "prompt_tokens": 8589,
+      "window_tokens": 7296,
+      "out_tokens": 128,
+      "prefill_sec": 9.302,
+      "decode_sec": 3.493,
+      "total_sec": 12.795,
+      "prefill_tok_per_sec": 923.3,
+      "decode_tok_per_sec": 36.6,
+      "context_chars": 324
+    },
+    {
+      "chunk_index": 0,
+      "doc_id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin",
+      "prompt_tokens": 9292,
+      "window_tokens": 8000,
+      "out_tokens": 128,
+      "prefill_sec": 10.555,
+      "decode_sec": 3.525,
+      "total_sec": 14.08,
+      "prefill_tok_per_sec": 880.4,
+      "decode_tok_per_sec": 36.3,
+      "context_chars": 365
+    }
+  ]
+}

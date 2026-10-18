@@ -52,7 +52,8 @@ LOG_DIR = Path(paths.GGUF_CACHE) / "logs"
 
 CORPUS_CHUNKS = 3134            # chunks in the v2 dataset
 CORPUS_WINDOWS = 320            # windows in the v2 dataset
-CORPUS_PROMPT_TOKENS = 24308045  # sum of prompt_tokens over the corpus (see ingest_student.json)
+# Sum of prompt_tokens over the corpus, from the ingest bench (artifacts/results/ingest_student.json).
+CORPUS_PROMPT_TOKENS = 24308045
 # The prompt is `<document>` + the whole window + `<chunk>` + instruction, so neighboring
 # chunks of one window share a prefix, everything up to the chunk. Over the corpus: 320
 # windows, 9.8 chunks per window, 81.4% shared prefix, so only the first occurrence of a
@@ -196,16 +197,26 @@ def complete(port: int, prompt: str, max_tokens: int, timeout: float = 600.0) ->
 # ---------------------------------------------------------------------------
 def metric_check() -> int:
     """Self-check: word-F1 of the stored bf16 answer must give 0.5373 from report 03."""
+    ref_mean, ref_base = 0.5373, 0.1893
     per_row = load_per_row()
     vals = [f1(v.get("tuned_out", ""), v["teacher"]) for v in per_row.values()]
     base = [f1(v.get("base_out", ""), v["teacher"]) for v in per_row.values()]
-    print(f"SFT bf16: mean {statistics.mean(vals):.4f}  median {statistics.median(vals):.4f} "
-          f"(bf16 reference: 0.5373 / 0.534)")
-    print(f"base 4bit: mean {statistics.mean(base):.4f}  median {statistics.median(base):.4f} "
+    mean, median = statistics.mean(vals), statistics.median(vals)
+    base_mean, base_median = statistics.mean(base), statistics.median(base)
+    print(f"SFT bf16: mean {mean:.4f}  median {median:.4f} (bf16 reference: 0.5373 / 0.534)")
+    print(f"base 4bit: mean {base_mean:.4f}  median {base_median:.4f} "
           f"(base reference: 0.1893 / 0.1764)")
+    if abs(mean - ref_mean) > 5e-5 or abs(base_mean - ref_base) > 5e-5:
+        print(f"MISMATCH: expected means {ref_mean} and {ref_base}")
+        return 1
     print("mean matches to 4 digits; the medians are recomputed over the same rows")
 
-    # check the hallucinated-number detector on the same stored answers
+    # check the hallucinated-number detector on the same stored answers; it reads the
+    # prompts, which only the dataset pipeline writes, so a fresh clone skips this part
+    if not LABELED.exists():
+        print(f"skipped the hallucinated-number check: {LABELED} is absent "
+              "(build it with `make pipeline`)")
+        return 0
     rows = load_rows(0)
     for field, label in (("mlx_bf16", "SFT bf16"), ):
         n = sum(len(numbers(r[field]) - numbers(r["prompt_raw"])) for r in rows)
