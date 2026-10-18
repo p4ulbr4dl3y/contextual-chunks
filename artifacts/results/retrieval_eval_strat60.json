@@ -1,0 +1,4533 @@
+{
+  "queries": 60,
+  "corpus": 3134,
+  "backend": "mlx",
+  "tag": "full",
+  "dropped": 0,
+  "arms": {
+    "A": {
+      "name": "A flat / RRF",
+      "metrics": {
+        "recall@1": 0.1,
+        "recall@5": 0.25,
+        "recall@10": 0.4,
+        "recall@50": 0.65,
+        "mrr@10": 0.1705,
+        "ndcg@10": 0.2232,
+        "miss@50": 0.35,
+        "doc_recall@10": 0.4667,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 44.5,
+        "total_p95_ms": 64.3,
+        "embed_p50_ms": 32.2,
+        "fuse_p50_ms": 12.4,
+        "rerank_p50_ms": 0,
+        "total_mean_ms": 224.7
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        }
+      ],
+      "sec": 14.1
+    },
+    "B": {
+      "name": "B ctx / RRF",
+      "metrics": {
+        "recall@1": 0.15,
+        "recall@5": 0.35,
+        "recall@10": 0.45,
+        "recall@50": 0.8167,
+        "mrr@10": 0.2328,
+        "ndcg@10": 0.2842,
+        "miss@50": 0.1833,
+        "doc_recall@10": 0.5167,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 45.2,
+        "total_p95_ms": 65.4,
+        "embed_p50_ms": 32.1,
+        "fuse_p50_ms": 13.1,
+        "rerank_p50_ms": 0,
+        "total_mean_ms": 239.1
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        }
+      ],
+      "sec": 14.8
+    },
+    "E": {
+      "name": "E flat / dense-only",
+      "metrics": {
+        "recall@1": 0.0333,
+        "recall@5": 0.35,
+        "recall@10": 0.4667,
+        "recall@50": 0.7667,
+        "mrr@10": 0.1774,
+        "ndcg@10": 0.2469,
+        "miss@50": 0.2333,
+        "doc_recall@10": 0.6,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 39.0,
+        "total_p95_ms": 41.5,
+        "embed_p50_ms": 33.5,
+        "fuse_p50_ms": 5.5,
+        "rerank_p50_ms": 0,
+        "total_mean_ms": 51.1
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        }
+      ],
+      "sec": 3.5
+    },
+    "F": {
+      "name": "F ctx / dense-only",
+      "metrics": {
+        "recall@1": 0.1667,
+        "recall@5": 0.4333,
+        "recall@10": 0.55,
+        "recall@50": 0.9333,
+        "mrr@10": 0.2648,
+        "ndcg@10": 0.3319,
+        "miss@50": 0.0667,
+        "doc_recall@10": 0.6667,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 40.5,
+        "total_p95_ms": 43.4,
+        "embed_p50_ms": 34.7,
+        "fuse_p50_ms": 5.8,
+        "rerank_p50_ms": 0,
+        "total_mean_ms": 53.1
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        }
+      ],
+      "sec": 3.6
+    },
+    "G": {
+      "name": "G student-ctx / dense-only",
+      "metrics": {
+        "recall@1": 0.2167,
+        "recall@5": 0.4833,
+        "recall@10": 0.6,
+        "recall@50": 0.8833,
+        "mrr@10": 0.3267,
+        "ndcg@10": 0.3915,
+        "miss@50": 0.1167,
+        "doc_recall@10": 0.6667,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 41.4,
+        "total_p95_ms": 45.5,
+        "embed_p50_ms": 35.3,
+        "fuse_p50_ms": 6.0,
+        "rerank_p50_ms": 0,
+        "total_mean_ms": 52.2
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        }
+      ],
+      "sec": 3.6
+    },
+    "H": {
+      "name": "H student-ctx / RRF",
+      "metrics": {
+        "recall@1": 0.1667,
+        "recall@5": 0.3167,
+        "recall@10": 0.45,
+        "recall@50": 0.8167,
+        "mrr@10": 0.2375,
+        "ndcg@10": 0.2869,
+        "miss@50": 0.1833,
+        "doc_recall@10": 0.5167,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 45.8,
+        "total_p95_ms": 65.4,
+        "embed_p50_ms": 32.3,
+        "fuse_p50_ms": 13.4,
+        "rerank_p50_ms": 0,
+        "total_mean_ms": 257.1
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        }
+      ],
+      "sec": 15.9
+    },
+    "C": {
+      "name": "C ctx / RRF + rerank",
+      "metrics": {
+        "recall@1": 0.1833,
+        "recall@5": 0.5167,
+        "recall@10": 0.65,
+        "recall@50": 0.8833,
+        "mrr@10": 0.3393,
+        "ndcg@10": 0.4143,
+        "miss@50": 0.1167,
+        "doc_recall@10": 0.7,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 54731.6,
+        "total_p95_ms": 71445.3,
+        "embed_p50_ms": 493.9,
+        "fuse_p50_ms": 60.3,
+        "rerank_p50_ms": 53723.8,
+        "total_mean_ms": 53676.1
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.125,
+          "ndcg@10": 0.3155
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        }
+      ],
+      "sec": 3222.2
+    },
+    "D": {
+      "name": "D flat / RRF + rerank",
+      "metrics": {
+        "recall@1": 0.1333,
+        "recall@5": 0.3833,
+        "recall@10": 0.4667,
+        "recall@50": 0.7333,
+        "mrr@10": 0.2384,
+        "ndcg@10": 0.2933,
+        "miss@50": 0.2667,
+        "doc_recall@10": 0.5,
+        "avg_group": 4.4
+      },
+      "latency": {
+        "total_p50_ms": 43383.2,
+        "total_p95_ms": 69290.6,
+        "embed_p50_ms": 365.1,
+        "fuse_p50_ms": 38.6,
+        "rerank_p50_ms": 43021.0,
+        "total_mean_ms": 45812.9
+      },
+      "per_query": [
+        {
+          "qid": "1023-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1064-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1082-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1093-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1296-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1342-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1354-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "1379-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1111,
+          "ndcg@10": 0.301
+        },
+        {
+          "qid": "1411-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1523-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "1526-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1545-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1691-semantic",
+          "type": "semantic",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "1751-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "1853-lexical",
+          "type": "lexical",
+          "category": "pharma",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "2042-multihop",
+          "type": "multihop",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2183-table",
+          "type": "table",
+          "category": "pharma",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "2353-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "2375-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2395-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2430-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2530-table",
+          "type": "table",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2534-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2536-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2563-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2567-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2575-lexical",
+          "type": "lexical",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2592-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "2657-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "2664-multihop",
+          "type": "multihop",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1667,
+          "ndcg@10": 0.3562
+        },
+        {
+          "qid": "2737-semantic",
+          "type": "semantic",
+          "category": "security",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "294-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "417-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "464-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "47-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "472-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.2,
+          "ndcg@10": 0.3869
+        },
+        {
+          "qid": "483-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "50-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1,
+          "ndcg@10": 0.2891
+        },
+        {
+          "qid": "504-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "525-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "526-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        },
+        {
+          "qid": "531-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "541-table",
+          "type": "table",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "559-lexical",
+          "type": "lexical",
+          "category": "food",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "579-multihop",
+          "type": "multihop",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.1429,
+          "ndcg@10": 0.3333
+        },
+        {
+          "qid": "592-semantic",
+          "type": "semantic",
+          "category": "food",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "60-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "62-semantic",
+          "type": "semantic",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "63-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "648-semantic",
+          "type": "semantic",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.25,
+          "ndcg@10": 0.4307
+        },
+        {
+          "qid": "656-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "682-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.3333,
+          "ndcg@10": 0.5
+        },
+        {
+          "qid": "684-lexical",
+          "type": "lexical",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "763-multihop",
+          "type": "multihop",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "768-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "80-multihop",
+          "type": "multihop",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "84-lexical",
+          "type": "lexical",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "861-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 1.0
+        },
+        {
+          "qid": "979-table",
+          "type": "table",
+          "category": "it",
+          "recall@1": 0.0,
+          "recall@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0
+        },
+        {
+          "qid": "98-table",
+          "type": "table",
+          "category": "construction",
+          "recall@1": 0.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.5,
+          "ndcg@10": 0.6309
+        }
+      ],
+      "sec": 2752.4
+    }
+  },
+  "sources": [
+    "retrieval_eval_strat60_sub.json",
+    "retrieval_eval_strat60_rr.json"
+  ]
+}

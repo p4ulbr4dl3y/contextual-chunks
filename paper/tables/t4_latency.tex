@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Query latency (M2 GPU, MLX fp16, warmed). ``Total'' is the end-to-end retrieval call, including query encoding, BM25, fusion and, for arms \arm{c} and \arm{d}, reranking.}
+\label{tab:latency}
+\begin{tabular}{lrrr}
+\toprule
+Arm & p50 & p95 & encode \\
+\midrule
+A: flat, RRF & 44 & 64 & 32 \\
+B: contextualized, RRF & 45 & 65 & 32 \\
+E: flat, dense-only & 39 & 42 & 34 \\
+\textbf{F: contextualized, dense-only} & 40 & 43 & 35 \\
+G: distilled, dense-only & 41 & 46 & 35 \\
+H: distilled, RRF & 46 & 65 & 32 \\
+C: contextualized, RRF, reranked & 54732 & 71445 & 494 \\
+D: flat, RRF, reranked & 43383 & 69291 & 365 \\
+\bottomrule
+\end{tabular}
+\end{table}

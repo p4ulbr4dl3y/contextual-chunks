@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or the released artefacts, please cite the technical report."
+title: "Reranker-Free Edge Retrieval: Distilling Contextual Chunk Enrichment into a 0.6B Model"
+abstract: >-
+  Contextual retrieval enriches each chunk with a short document-level summary
+  before indexing and is usually paired with a cross-encoder reranker. This work
+  shows that on a small, homogeneous, non-English corpus a dense-only index of
+  distilled on-device contexts comes within 0.05 recall@10 of the same index
+  with a 0.6B cross-encoder, an interval that includes zero, at 1/1322 of the
+  query latency, and that the API teacher can be distilled into a 0.6B model
+  that regenerates the corpus on the device.
+type: software
+authors:
+  - family-names: Surovtsev
+    given-names: Egor
+repository-code: "https://github.com/p4ulbr4dl3y/contextual-chunks"
+url: "https://github.com/p4ulbr4dl3y/contextual-chunks"
+license: MIT
+year: 2026
+keywords:
+  - contextual retrieval
+  - retrieval-augmented generation
+  - knowledge distillation
+  - reranking
+  - on-device inference
+  - MLX
+  - Russian

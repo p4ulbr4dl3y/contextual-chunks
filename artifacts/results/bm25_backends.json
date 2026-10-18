@@ -1,0 +1,77 @@
+{
+  "queries": 234,
+  "corpus": 3134,
+  "limit": 100,
+  "rank_bm25": {
+    "recall@1": 0.0684,
+    "recall@5": 0.2265,
+    "recall@10": 0.3248,
+    "recall@50": 0.5128,
+    "mrr@10": 0.1362,
+    "ndcg@10": 0.1805,
+    "doc_recall@10": 0.4145,
+    "miss@50": 0.3846,
+    "p50_ms": 4.1,
+    "build_sec": 7.2
+  },
+  "fastembed": {
+    "recall@1": 0.0726,
+    "recall@5": 0.2308,
+    "recall@10": 0.3547,
+    "recall@50": 0.6239,
+    "mrr@10": 0.1423,
+    "ndcg@10": 0.1916,
+    "doc_recall@10": 0.453,
+    "miss@50": 0.2692,
+    "p50_ms": 56.8,
+    "load_sec": 0.1
+  },
+  "rrf_rank_bm25": {
+    "A": {
+      "recall@1": 0.1068,
+      "recall@5": 0.3333,
+      "recall@10": 0.4658,
+      "recall@50": 0.7521,
+      "mrr@10": 0.2066,
+      "ndcg@10": 0.2677,
+      "miss@50": 0.2479,
+      "doc_recall@10": 0.5684,
+      "avg_group": 4.5
+    },
+    "B": {
+      "recall@1": 0.1923,
+      "recall@5": 0.4231,
+      "recall@10": 0.5299,
+      "recall@50": 0.859,
+      "mrr@10": 0.2877,
+      "ndcg@10": 0.3452,
+      "miss@50": 0.141,
+      "doc_recall@10": 0.6154,
+      "avg_group": 4.5
+    }
+  },
+  "rrf_fastembed": {
+    "A": {
+      "recall@1": 0.1154,
+      "recall@5": 0.3889,
+      "recall@10": 0.5043,
+      "recall@50": 0.7821,
+      "mrr@10": 0.2224,
+      "ndcg@10": 0.2891,
+      "miss@50": 0.2179,
+      "doc_recall@10": 0.5983,
+      "avg_group": 4.5
+    },
+    "B": {
+      "recall@1": 0.1709,
+      "recall@5": 0.4359,
+      "recall@10": 0.5556,
+      "recall@50": 0.8718,
+      "mrr@10": 0.2856,
+      "ndcg@10": 0.3501,
+      "miss@50": 0.1282,
+      "doc_recall@10": 0.6453,
+      "avg_group": 4.5
+    }
+  }
+}

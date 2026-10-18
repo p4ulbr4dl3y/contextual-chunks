@@ -1,0 +1,24 @@
+Contextual retrieval prepends a short document-level summary to every chunk
+before indexing, and the published recipe pairs it with a cross-encoder reranker
+to restore the precision that flat chunks lose. Neither stage is cheap outside a
+datacenter, and this paper asks whether an edge pipeline needs both. We label
+3{,}134 chunks from 82 Russian business documents with an API teacher (24.3M
+prompt tokens, USD~0.82) and distill the teacher's contextual enrichment into
+\texttt{Qwen3-0.6B} with LoRA. Retrieval is then measured with
+\texttt{Qwen3-Embedding-0.6B}, BM25, reciprocal rank fusion and
+\texttt{Qwen3-Reranker-0.6B} on an Apple~M2 GPU (MLX, fp16): six configurations
+on 234 synthetic queries that carry gold chunks, and all eight on a stratified
+subset of sixty. On that subset a reranker-free pipeline with distilled
+on-device context reaches 0.600 recall@10 against 0.650 for the same index with
+a 0.6B cross-encoder, a difference whose paired bootstrap interval includes
+zero, at a median latency of 41.4~ms against 54.7~s, a factor of 1{,}322, while
+reranking flat chunks is dominated by the contextual dense-only arm. On this
+homogeneous corpus BM25 fusion degrades quality and no setting of the fusion
+parameters recovers the loss. Distilling the context generator costs little in
+quality: the student lands within 0.04 recall@10 of the teacher while improving
+recall@1 and MRR, and with Matryoshka truncation to 512 dimensions plus a
+Russian query instruction it matches the teacher baseline on recall@1 and MRR at
+half the index size. Generating the contexts for the whole corpus takes 1.85~h
+and USD~0.82 through the API, or 4.49~h at no cost on the device, where no
+document leaves the machine. The dataset, the adapter, the evaluation harness
+and the measurement scripts are released (Section~\ref{sec:availability}).

@@ -1,0 +1,38 @@
+# --- local environment ---
+.venv/
+.env
+*.env
+
+# --- python ---
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.ipynb_checkpoints/
+
+# --- dataset: the pipeline rebuilds the intermediate stages ---
+# only data/provenance/ is committed
+data/raw/
+data/interim/
+data/processed/
+data/legacy/
+
+# --- local caches and indexes ---
+.cache/
+index/
+logs/
+
+# --- paper build ---
+paper/main.pdf
+paper/*.log
+paper/*.blg
+paper/*.aux
+paper/*.out
+paper/*.bbl
+paper/*.synctex.gz
+
+# --- tooling ---
+.pytest_cache/
+.ruff_cache/

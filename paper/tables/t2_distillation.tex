@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Distillation quality: word-level F1 of generated contexts against the teacher, on 60 held-out chunks (base Qwen3-0.6B vs.\ the same model after LoRA SFT).}
+\label{tab:distill}
+\begin{tabular}{lrr}
+\toprule
+Metric & Baseline & After SFT \\
+\midrule
+word-F1 mean & 0.189 & \textbf{0.537} \\
+word-F1 median & 0.176 & 0.534 \\
+word-F1 p10 & 0.064 & 0.319 \\
+Empty responses & 1.7\% & \textbf{0\%} \\
+Hallucinated numbers & 0 & 0 \\
+Generation time / sample (s) & 5.55 & 7.82 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,43 @@
+\section{Distilling the Context Generator}
+\label{sec:distill}
+
+The teacher produces high-quality contexts but requires an API call per chunk
+and sends document text to a third party. We therefore distill the teacher into
+\texttt{Qwen3-0.6B} \citep{qwen3} so that the ingest stage runs locally.
+
+\paragraph{Training.}
+The student is fine-tuned with QLoRA \citep{dettmers2023qlora}: the base model
+is loaded in 4-bit precision, and low-rank adapters \citep{hu2022lora} with
+rank 16 and scaling factor 16 are attached to all linear layers, which
+corresponds to 1.665\% of the parameters (10.1M of 606.1M). Training uses two
+epochs with an effective batch size of eight, a learning rate of
+$2\times10^{-4}$, and a maximum sequence length of 16{,}384 tokens; the longest
+training sample is 9.7k tokens, so no sample is truncated. Loss is computed on
+the assistant response only, with the document and the instruction masked out.
+The training and inference prompts are byte-identical
+chat templates with thinking disabled, which is enforced by a hard check before
+training.
+
+\paragraph{Quality.}
+Table~\ref{tab:distill} compares the base model and the fine-tuned student on
+sixty held-out chunks, using word-level F1 against the teacher context as the
+metric. The base model is unusable: it produces empty or unrelated output, with
+a mean F1 of 0.189 and 1.7\% empty responses. After fine-tuning, the mean F1 is
+0.537, the tenth percentile rises from 0.064 to 0.319, and no response is
+empty. Neither model emits numbers that are absent from the source document, so
+the improvement does not come from hallucinated detail. Generation is slightly
+slower per sample (7.82~s against 5.55~s) because the fine-tuned model produces
+longer, more specific contexts instead of short generic ones.
+
+\input{tables/t2_distillation}
+
+\paragraph{Corpus-wide ingest.}
+We regenerate the context for all 3{,}134 chunks with the student on the target
+device (Apple~M2, MLX in bfloat16). All chunks of a window share the same
+prefix, so its key/value state is computed once and reused, which reduces
+prefill from an estimated 7.08~h to 2.31~h, a factor of 3.1. Total wall-clock
+time is 4.49~h, split into 2.31~h of prefill and 2.19~h of decode; the median
+chunk takes 4.20~s. Eleven contexts (0.35\%) reach the 160-token output cap.
+The teacher required 1.85~h and USD~0.82, so the on-device path is 2.4 times
+slower, costs nothing per run, and never transmits document text.
+Table~\ref{tab:ingest} reports the comparison.

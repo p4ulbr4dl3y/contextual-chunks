@@ -1,0 +1,33 @@
+{
+ "pipeline": "ocrpipe contextual-retrieval SFT",
+ "rows": 3134,
+ "docs": 82,
+ "windows": 320,
+ "teacher": {
+  "model": "cline-pass/deepseek-v4.1-flash",
+  "reasoning": {
+   "enabled": false
+  },
+  "temperature": 0,
+  "max_tokens": 300
+ },
+ "student": "Qwen/Qwen3-0.6B",
+ "chunking": {
+  "window_cap_tokens": 8000,
+  "tokenizer": "Qwen/Qwen3-0.6B",
+  "max_chunk_tokens": 1200,
+  "max_table_rows": 8,
+  "max_table_tokens": 1500
+ },
+ "prompt_template": "anthropic-style RU (<document>/<chunk>), see README",
+ "totals": {
+  "cost_usd": 0.8168,
+  "prompt_tokens": 19485194,
+  "cached_tokens": 15447421
+ },
+ "dedup": {
+  "duplicate_documents_dropped": 5,
+  "duplicate_prompts_dropped": 61
+ },
+ "split": "by window_hash (identical prompts never straddle train/val)"
+}

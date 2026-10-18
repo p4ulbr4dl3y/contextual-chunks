@@ -1,0 +1,66 @@
+\section{Introduction}
+\label{sec:intro}
+
+Retrieval-augmented generation is only as good as the passages it retrieves,
+and a chunk that has been cut out of its document frequently reads as
+ambiguous on its own. Contextual retrieval attacks this at indexing time by
+prepending to each chunk a short summary of the document it came from, which
+measurably reduces retrieval failures \citep{anthropic2024contextual}. The
+published recipe does not stop there: it also reranks the fused candidate list
+with a cross-encoder.
+
+Neither stage is cheap once the system leaves a datacenter. Enrichment costs a
+language-model call per chunk, though this is paid once, at ingest, and can be
+amortized over many queries. The reranker is paid on every query, one forward
+pass per candidate, and on a laptop or a phone that is the cost that hurts:
+sixty-four candidates through a 0.6B cross-encoder take tens of seconds, while
+a dense-only first stage answers in tens of milliseconds. If the contextual
+enrichment has already resolved the ambiguity the reranker was meant to fix,
+the reranker can be dropped, and the whole pipeline becomes usable
+interactively on a single device. This paper takes up that possibility and
+tests it on a corpus of the kind an edge deployment actually meets.
+
+Three questions organize the study. Is a reranker still needed once chunks are
+contextualized? Can the enrichment itself be moved on-device, by distilling an
+API teacher into a small local model, without giving up retrieval quality? And
+which parts of the standard recipe, BM25 fusion, embedding dimension and the
+language of the query instruction among them, actually help on a small,
+homogeneous, non-English corpus? Published results report the recipe's two
+components together, so the three questions cannot be answered from them
+directly.
+
+The corpus is 82 Russian business documents that came out of our own OCR
+pipeline. It is deliberately small and stylistically uniform: a few hundred
+documents that share vocabulary, layout and boilerplate, which is the setting an
+edge deployment faces. Every one of the 3{,}134 chunks is labeled by an API
+teacher, a 0.6B student is trained to reproduce the teacher's contexts, and
+retrieval is evaluated with a purpose-built set of 234 queries carrying gold
+chunks. All measurements are taken on a single Apple~M2 with MLX in fp16, the
+same machine that would serve the queries.
+
+Our contributions are the following.
+
+\begin{enumerate}
+  \item A contextual chunk dataset of 3{,}134 labeled chunks over 82 Russian
+  documents, with category and table metadata, produced by an API
+  teacher for USD~0.82 and released publicly (\S\ref{sec:data}).
+  \item A 0.6B LoRA student that reproduces the teacher's contexts (word-level
+  F1 improves from 0.189 to 0.537) and can regenerate the entire corpus
+  on-device in 4.49~h at zero marginal cost (\S\ref{sec:distill}).
+  \item An eight-arm retrieval evaluation, six configurations on 234 gold-chunk
+  queries and all eight on a common stratified subset of sixty, showing that a
+  reranker-free pipeline with distilled on-device context comes within 0.05
+  recall@10 of the same index with a 0.6B cross-encoder at a factor of 1{,}322
+  in median latency, and that reranking flat chunks is dominated by the
+  contextual dense-only arm (\S\ref{sec:results-main}).
+  \item A negative result for lexical fusion: on this homogeneous corpus BM25
+  degrades every configuration, and neither the fusion weights, the rank
+  constant nor the retrieval depth recover the loss (\S\ref{sec:ablations}).
+  \item Two cheap levers for the on-device path, Matryoshka truncation to 512
+  dimensions and a Russian query instruction, that together lift the student
+  pipeline to the teacher baseline at half the index size
+  (\S\ref{sec:ablations}).
+  \item A stratified analysis of where distillation transfers and where it does
+  not, and a break-even model that separates ingest cost from query cost
+  (\S\ref{sec:strata}, \S\ref{sec:breakeven}).
+\end{enumerate}

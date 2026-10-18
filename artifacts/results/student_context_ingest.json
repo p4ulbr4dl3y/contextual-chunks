@@ -1,0 +1,33 @@
+{
+ "model": "qwen3-0.6b-contextual-chunks-bfloat16 (MLX, M2 GPU)",
+ "corpus": {
+  "chunks": 3134,
+  "docs": 82,
+  "prompt_tokens_total": 24333117
+ },
+ "student_ingest": {
+  "wall_hours": 4.49,
+  "sec_per_chunk_mean": 5.16,
+  "sec_per_chunk_median": 4.2,
+  "prefill_hours": 2.31,
+  "prefill_sec_median": 1.46,
+  "decode_hours": 2.19,
+  "out_tokens": {
+   "min": 43,
+   "median": 90,
+   "max": 160,
+   "capped_at_160": 11
+  },
+  "prefix_cache": {
+   "note": "KV cache shared by the <document> prefix of one window (median 7 chunks per window)",
+   "prefill_no_cache_est_hours": 7.08,
+   "prefill_with_cache_hours": 2.31
+  }
+ },
+ "teacher_baseline": {
+  "model": "cline-pass/deepseek-v4.1-flash (API)",
+  "latency_sec_total_hours": 1.85,
+  "latency_sec_median": 2.06,
+  "cost_usd_total": 0.8168
+ }
+}

@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+
+% arXiv: any class compilable with pdflatex is accepted; no template required.
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{2pt}
+
+\newcommand{\arm}[1]{\textsc{#1}}
+\newcommand{\ctx}{\textsc{ctx}}
+
+\title{\bfseries Reranker-Free Edge Retrieval:\\
+Distilling Contextual Chunk Enrichment into a 0.6B Model}
+
+\author{Egor Surovtsev}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\input{sections/01_intro}
+\input{sections/02_related}
+\input{sections/03_data}
+\input{sections/04_distill}
+\input{sections/05_harness}
+\input{sections/06_results}
+\input{sections/07_limitations}
+\input{sections/08_conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Dataset statistics. Chunks are segments of overlapping document windows, extracted from 82 Russian business documents. Contexts were labeled by an API teacher (\texttt{deepseek-v4.1-flash}, reasoning off) with 79.3\% prompt-cache hit rate.}
+\label{tab:dataset}
+\begin{tabular}{lr}
+\toprule
+Property & Value \\
+\midrule
+Documents & 82 \\
+Chunks (window$\rightarrow$context pairs) & 3134 \\
+Median chunk length (tokens) & 461 \\
+Median generated context (characters) & 296 \\
+Table chunks & 1608 \\
+\midrule
+\quad construction & 211 \\
+\quad food & 496 \\
+\quad it & 1879 \\
+\quad pharma & 239 \\
+\quad security & 309 \\
+\midrule
+Teacher prompt tokens (total) & 24.31M \\
+Teacher labeling cost & \$0.82 \\
+\midrule
+Train / validation chunks & 2701 / 433 \\
+Split unit & \texttt{window\_hash} \\
+\bottomrule
+\end{tabular}
+\end{table}

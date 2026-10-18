@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{BM25 backend comparison. \texttt{rank\_bm25} is an in-memory BM25Okapi with a Russian Snowball stemmer; \texttt{fastembed} uses \texttt{Qdrant/bm25} sparse vectors with IDF applied server-side (18 stop-word files, 92\,KB, no neural network). Hybrid columns are arms A/B.}
+\label{tab:bm25}
+\begin{tabular}{lrrrr}
+\toprule
+Setting & R@10 & MRR@10 & docR@10 & p50 (ms) \\
+\midrule
+\multicolumn{5}{l}{\emph{BM25-only}} \\
+\quad \texttt{rank\_bm25} & 0.325 & 0.136 & 0.414 & 4.1 \\
+\quad \texttt{fastembed} & 0.355 & 0.142 & 0.453 & 56.8 \\
+\addlinespace[2pt]
+\multicolumn{5}{l}{\emph{Hybrid RRF (dense and BM25)}} \\
+\quad A flat, \texttt{rank\_bm25} & 0.466 & 0.207 & 0.568 & -- \\
+\quad A flat, \texttt{fastembed} & 0.504 & 0.222 & 0.598 & -- \\
+\quad B contextualized, \texttt{rank\_bm25} & 0.530 & 0.288 & 0.615 & -- \\
+\quad B contextualized, \texttt{fastembed} & 0.556 & 0.286 & 0.645 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

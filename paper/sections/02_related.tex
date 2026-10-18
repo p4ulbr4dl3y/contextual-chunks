@@ -1,0 +1,70 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Chunk enrichment.}
+Retrieval quality is decided as much by what is indexed as by the encoder.
+Document expansion by query prediction appends generated queries to a passage
+before indexing \citep{nogueira2019document}, and proposition-level indexing
+replaces passages with self-contained statements
+\citep{chen2024densex}. A recent taxonomy and evaluation of chunking strategies
+shows that the choice of chunking policy interacts strongly with the retriever
+\citep{zhou2026chunking}, while late chunking embeds a whole document before
+splitting it, so that every chunk vector already carries document context
+\citep{mortezaagha2026latechunking}. Contextual retrieval works along the same
+lines, with a document-conditioned summary prepended to each chunk
+\citep{anthropic2024contextual}. These methods are usually evaluated together
+with a cross-encoder reranker, and the published recipe reports the two
+components jointly, which makes their individual contributions hard to
+disentangle. We hold first-stage retrieval fixed and vary only the index text and the
+presence of the reranker, and we go one step further by distilling the
+enrichment model itself so that the ingest stage also runs on-device.
+
+\paragraph{Reranking and late interaction.}
+Cross-encoder reranking is an established second stage over a first-stage
+candidate list \citep{nogueira2019passage}, and late-interaction models such as
+ColBERT retain token-level matching without a full cross-encoder
+\citep{khattab2020colbert}. A controlled study of long-context question
+answering finds that learned context planning and reranking do not improve over
+strong first-stage retrieval \citep{li2026reranking}, which agrees with our
+negative result. Modern instruction-tuned embedders and rerankers supply both
+stages from a single model family \citep{qwen3embedding}. Reranking is usually
+reported as effective, but it scales linearly in the candidate pool and is the
+most expensive part of an interactive pipeline on a laptop. We quantify that
+cost on a fixed device, and find that once the chunks are contextualized the
+reranker can be dropped with no measurable loss in quality.
+
+\paragraph{Hybrid retrieval and fusion.}
+Sparse lexical retrieval with BM25 remains a strong baseline
+\citep{robertson2009bm25}, and learned sparse models such as SPLADE improve on
+it \citep{formal2021splade}. Dense and sparse lists are commonly combined with
+reciprocal rank fusion \citep{cormack2009reciprocal}, and self-contained
+tooling for hybrid retrieval over quantized embeddings and lexical indexes is
+available \citep{livieris2026quanta}. Hybrid retrieval is reported to help on
+heterogeneous corpora \citep{luan2021sparse}, but the benefit depends on how
+much the two channels complement each other. Our corpus is homogeneous, and we
+find that fusion hurts consistently, including with a stronger sparse backend.
+
+\paragraph{Distillation and parameter-efficient tuning.}
+Knowledge distillation transfers the behavior of a large model to a smaller
+one \citep{hinton2015distilling}, and low-rank adaptation makes the transfer
+cheap \citep{hu2022lora,dettmers2023qlora}. We use LoRA over a 4-bit base model
+to distill an API teacher into 0.6B parameters, and we judge the student by the
+retrieval quality it supports rather than by generation quality alone.
+Distilling a retrieval-augmented pipeline for smartphone deployment has been
+studied in the legal domain \citep{kamal2026smartphone}, and on-premise
+deployments select sub-networks that fit the local hardware
+\citep{rizeakos2026onprem}.
+
+\paragraph{Efficient retrieval on device.}
+Matryoshka representation learning trains embeddings whose prefixes are
+individually usable, which allows truncation with little loss
+\citep{kusupati2022matryoshka}; dimension-elastic indexes serve several
+truncation levels from one resident index \citep{culatana2026mrvq}, and
+sentence encoders provide the dense backbone
+\citep{reimers2019sentence,karpukhin2020dense}. Retrieval-augmented generation
+\citep{lewis2020retrieval} and its surveys \citep{gao2023retrieval} describe
+the full pipeline; the practical constraint in our setting is that every
+component must fit and run on one consumer device. We therefore report latency
+and cost alongside quality, and we build on the MLX framework for Apple silicon
+\citep{mlx} with a local vector index \citep{qdrant}.
+

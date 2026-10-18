@@ -1,0 +1,67 @@
+\section{Retrieval Harness}
+\label{sec:harness}
+
+\paragraph{Device and runtime.}
+All measurements are taken on an Apple~M2 (Mac14,2, 8-core GPU) with MLX
+\citep{mlx}; the retrieval models run in fp16, while the ingest model of
+Section~\ref{sec:distill} runs in bfloat16. The vector index is a local Qdrant
+instance without a server process \citep{qdrant}; it stores 3{,}134 points with
+fp32 vectors.
+
+\paragraph{Models.}
+Dense retrieval uses \texttt{Qwen3-Embedding-0.6B} with 1{,}024-dimensional
+output and a maximum input length of 2{,}048 tokens, with the model's query
+instruction prepended to each query \citep{qwen3embedding}. Reranking uses
+\texttt{Qwen3-Reranker-0.6B} from the same family. Candidates are length-bucketed
+and scored in batches of up to sixteen pairs, and the reranker sustains about
+1.2 pairs per second end to end at the actual chunk lengths.
+
+\paragraph{Sparse channel and fusion.}
+The default sparse channel is an in-memory BM25Okapi implementation with a
+Russian Snowball stemmer \citep{robertson2009bm25,porter1980algorithm} and
+corpus-calibrated average length. We additionally evaluate the
+\texttt{Qdrant/bm25} sparse backend, which applies IDF on the server side; the
+backend is eighteen stop-word files and a Python implementation, with no neural
+network involved. Dense and sparse lists are combined with reciprocal rank fusion
+\citep{cormack2009reciprocal} with the rank constant fixed at $k=60$.
+
+\paragraph{Metrics.}
+We report recall at 1, 5, 10 and 50, MRR@10, nDCG@10, document-level recall@10
+and the fraction of queries for which the gold group is absent from the top 50
+(\emph{miss@50}); recall@$k$ appears as R@$k$ in the tables. All metrics use the
+gold groups of Section~\ref{sec:queries}. Differences between arms are reported
+with paired bootstrap intervals over queries (20{,}000 resamples, fixed seed).
+Latency is measured per query after warm-up and reported as the median and the
+95th percentile over the evaluated query set; arms \arm{c} and \arm{d} are timed
+on the sixty-query subset of Section~\ref{sec:results-main}.
+
+\paragraph{Arms.}
+Table~\ref{tab:arms} lists the eight configurations. Four of them form a
+$2\times2$ design over the index content (flat chunk or contextualized chunk)
+and the presence of the reranker; the remaining four isolate dense-only
+retrieval and the distilled context. The two indexes differ only in the text
+that is embedded, so a difference between arm~\arm{a} and arm~\arm{b} is
+attributable to the context alone.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Retrieval arms. \emph{Index text} is what the embedder sees;
+\emph{query path} is what happens after the first stage. Arms \arm{c} and
+\arm{d} rerank a pool of sixty-four candidates with a 0.6B cross-encoder.}
+\label{tab:arms}
+\begin{tabular}{lll}
+\toprule
+Arm & Index text & Query path \\
+\midrule
+\arm{a} & flat chunk & dense, BM25, RRF \\
+\arm{b} & context $\Vert$ chunk & dense, BM25, RRF \\
+\arm{c} & context $\Vert$ chunk & dense, BM25, RRF, reranked \\
+\arm{d} & flat chunk & dense, BM25, RRF, reranked \\
+\arm{e} & flat chunk & dense only \\
+\arm{f} & context $\Vert$ chunk & dense only \\
+\arm{g} & distilled context $\Vert$ chunk & dense only \\
+\arm{h} & distilled context $\Vert$ chunk & dense, BM25, RRF \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,52 @@
+{
+  "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-q8_0.gguf",
+  "rows": 60,
+  "gates": {
+    "chat_template_identical": {
+      "ok": true,
+      "snapshot_sha": "5da44855ab7e0641",
+      "gguf_sha": "5da44855ab7e0641",
+      "chars": 4905
+    },
+    "apply_template_matches_training": {
+      "ok": true,
+      "checked": 3,
+      "gguf_sha": "fb771bd671803b87",
+      "hf_sha": "fb771bd671803b87"
+    },
+    "negative_control_without_kwargs": {
+      "ok": true,
+      "differs": [
+        true,
+        true,
+        true
+      ],
+      "think_block_present": [
+        false,
+        false,
+        false
+      ]
+    },
+    "tokenizer_parity": {
+      "ok": true,
+      "rows": 60,
+      "bad_rows": 0,
+      "bad_tokens": 0,
+      "first_divergence": null
+    },
+    "file_type": {
+      "ok": true,
+      "got": "Q8_0",
+      "expected": "Q8_0"
+    }
+  },
+  "build_info": "b10180-11b068d06",
+  "pre_sweep_bad_rows": {
+    "qwen2": 0,
+    "qwen35": 0,
+    "llama-bpe": 0,
+    "gpt-4o": 7,
+    "default": 60
+  },
+  "failures": []
+}

@@ -1,0 +1,196 @@
+{
+  "device": "mlx-gpu",
+  "backend": "mlx",
+  "dtype": "float16 (converted MLX cache)",
+  "torch": "2.14.1",
+  "threads": 4,
+  "corpus_size": 3134,
+  "top_k": 50,
+  "rows": [
+    {
+      "kind": "embed",
+      "batch": 8,
+      "max_len": 512,
+      "sec": 29.147025958023733,
+      "rate": 8.783057330400705,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 8,
+      "max_len": 1024,
+      "sec": 63.247591499995906,
+      "rate": 4.047584958235391,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 16,
+      "max_len": 512,
+      "sec": 28.549540707987035,
+      "rate": 8.966869296373,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 16,
+      "max_len": 1024,
+      "sec": 31.66418474999955,
+      "rate": 8.084844186616984,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 32,
+      "max_len": 512,
+      "sec": 31.1749587910017,
+      "rate": 8.21171895418484,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 32,
+      "max_len": 1024,
+      "sec": 33.648358959006146,
+      "rate": 7.608097628531758,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 64,
+      "max_len": 512,
+      "sec": 35.78308254198055,
+      "rate": 7.154218748473164,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed",
+      "batch": 64,
+      "max_len": 1024,
+      "sec": 53.077481374988565,
+      "rate": 4.823137672855623,
+      "unit": "texts/s"
+    },
+    {
+      "kind": "embed_ablation",
+      "name": "sorted + token_budget 32768 (default)",
+      "sec": 72.81317729098373,
+      "rate": 3.515847124442128,
+      "padding_waste": 1.1888641464750898
+    },
+    {
+      "kind": "embed_ablation",
+      "name": "sorted + token_budget 8192",
+      "sec": 73.52118887502002,
+      "rate": 3.481989395399726,
+      "padding_waste": 1.07766466960041
+    },
+    {
+      "kind": "embed_ablation",
+      "name": "sorted, no budget (bs=32)",
+      "sec": 76.01641220902093,
+      "rate": 3.3676937987560045,
+      "padding_waste": 1.24277609882827
+    },
+    {
+      "kind": "embed_ablation",
+      "name": "no sorting (bs=32)",
+      "sec": 151.58667141699698,
+      "rate": 1.688802832115591,
+      "padding_waste": 2.5723627237862963
+    },
+    {
+      "kind": "embed_ablation",
+      "name": "one by one (bs=1)",
+      "sec": 66.2363247500034,
+      "rate": 3.8649487417398842,
+      "padding_waste": 1.0
+    },
+    {
+      "kind": "embed_ablation",
+      "name": "bf16 (vs fp16 default)",
+      "sec": 54.67717949999496,
+      "rate": 4.682026438470982
+    },
+    {
+      "kind": "rerank",
+      "batch": 4,
+      "doc_tokens": 600,
+      "sec": 14.45310904100188,
+      "rate": 4.42811299758682
+    },
+    {
+      "kind": "rerank",
+      "batch": 4,
+      "doc_tokens": 1200,
+      "sec": 21.964540917018894,
+      "rate": 2.9137872829570757
+    },
+    {
+      "kind": "rerank",
+      "batch": 8,
+      "doc_tokens": 600,
+      "sec": 15.987444333004532,
+      "rate": 4.0031413818829185
+    },
+    {
+      "kind": "rerank",
+      "batch": 8,
+      "doc_tokens": 1200,
+      "sec": 29.048383916000603,
+      "rate": 2.2032206743435094
+    },
+    {
+      "kind": "rerank",
+      "batch": 16,
+      "doc_tokens": 600,
+      "sec": 18.564326916995924,
+      "rate": 3.4474721483926802
+    },
+    {
+      "kind": "rerank",
+      "batch": 16,
+      "doc_tokens": 1200,
+      "sec": 31.07639020800707,
+      "rate": 2.0594412533637807
+    },
+    {
+      "kind": "rerank",
+      "batch": 32,
+      "doc_tokens": 600,
+      "sec": 19.715717084007338,
+      "rate": 3.246141123211513
+    },
+    {
+      "kind": "rerank",
+      "batch": 32,
+      "doc_tokens": 1200,
+      "sec": 32.952569332992425,
+      "rate": 1.9421854287981906
+    },
+    {
+      "kind": "rerank_ablation",
+      "name": "sorted-off",
+      "sec": 24.309995375020662,
+      "rate": 2.6326619570550043
+    }
+  ],
+  "best_embed": {
+    "kind": "embed",
+    "batch": 16,
+    "max_len": 512,
+    "sec": 28.549540707987035,
+    "rate": 8.966869296373,
+    "unit": "texts/s"
+  },
+  "best_rerank": {
+    "kind": "rerank",
+    "batch": 4,
+    "doc_tokens": 600,
+    "sec": 14.45310904100188,
+    "rate": 4.42811299758682
+  },
+  "ingest_sec": 349.50883038606,
+  "query_topk_sec": 11.29149143828272,
+  "peak_mem_mb": 1833.0
+}

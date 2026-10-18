@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Context-generation cost for the whole corpus (3{,}134 chunks, 82 documents, 24.3M prompt tokens): API teacher vs.\ distilled 0.6B model running on-device.}
+\label{tab:ingest}
+\begin{tabular}{lrr}
+\toprule
+ & Teacher (API) & Student (on-device) \\
+\midrule
+Model & \texttt{deepseek-v4.1-flash} & \texttt{Qwen3-0.6B} with LoRA \\
+Wall-clock (h) & 1.85 & 4.49 \\
+Per chunk, median (s) & 2.06 & 4.20 \\
+Prefill (h) & -- & 2.31 \\
+Decode (h) & -- & 2.19 \\
+Output tokens (med./max) & -- & 90/160 \\
+Cost (USD) & \textbf{\$0.82} & \textbf{\$0} \\
+Data leaves device & yes & no \\
+\bottomrule
+\end{tabular}
+\end{table}

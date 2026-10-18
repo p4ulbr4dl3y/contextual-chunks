@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Retrieval quality on the full set of 234 queries with gold chunks (3{,}134-chunk corpus, Apple~M2, MLX fp16). Metrics use gold groups: a hit on an overlapping neighboring window (within two positions) counts as the same text.}
+\label{tab:retrieval}
+\footnotesize
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Arm & R@1 & R@5 & R@10 & R@50 & MRR@10 & nDCG@10 & docR@10 & miss@50 \\
+\midrule
+A: flat, RRF & 0.107 & 0.333 & 0.466 & 0.752 & 0.207 & 0.268 & 0.568 & 0.248 \\
+B: contextualized, RRF & 0.192 & 0.423 & 0.530 & 0.859 & 0.288 & 0.345 & 0.615 & 0.141 \\
+E: flat, dense-only & 0.141 & 0.410 & 0.517 & 0.821 & 0.259 & 0.321 & 0.650 & 0.179 \\
+\textbf{F: contextualized, dense-only} & 0.197 & 0.526 & 0.658 & 0.910 & 0.328 & 0.406 & 0.739 & 0.090 \\
+G: distilled, dense-only & 0.218 & 0.517 & 0.620 & 0.897 & 0.342 & 0.409 & 0.709 & 0.103 \\
+H: distilled, RRF & 0.197 & 0.414 & 0.530 & 0.863 & 0.288 & 0.345 & 0.632 & 0.137 \\
+\bottomrule
+\end{tabular}
+\end{table}

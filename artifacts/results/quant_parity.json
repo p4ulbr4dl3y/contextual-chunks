@@ -1,0 +1,3095 @@
+{
+  "f16": {
+    "summary": {
+      "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-f16.gguf",
+      "rows": 60,
+      "file_mb": 1142.7,
+      "identical": 0,
+      "identical_rate": 0.0,
+      "prefix_ratio_mean": 0.1539,
+      "prefix_ratio_median": 0.0972,
+      "rows_below_half": 56,
+      "f1_vs_mlx_bf16_stored": 0.5962,
+      "f1_vs_mlx_bf16_recalc": 0.5962
+    },
+    "rows": [
+      {
+        "id": "construction_62_Плат_жное_поруч...___22635244194260010230020.bin__win0_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.363636
+      },
+      {
+        "id": "construction_76_Электронный_кон...___14825001637260001030005.bin__win0_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.028846,
+        "common": 3,
+        "ref_tokens": 104,
+        "f1": 0.489796
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.25,
+        "common": 24,
+        "ref_tokens": 96,
+        "f1": 0.866667
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.196721,
+        "common": 12,
+        "ref_tokens": 61,
+        "f1": 0.375
+      },
+      {
+        "id": "food_supply_44_Контракт___04_2...___34714017938260000030002.bin__win1_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.115789,
+        "common": 11,
+        "ref_tokens": 95,
+        "f1": 0.333333
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094595,
+        "common": 7,
+        "ref_tokens": 74,
+        "f1": 0.571429
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.107692,
+        "common": 7,
+        "ref_tokens": 65,
+        "f1": 0.8
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.118644,
+        "common": 7,
+        "ref_tokens": 59,
+        "f1": 0.461538
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.205128
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.09589,
+        "common": 7,
+        "ref_tokens": 73,
+        "f1": 0.384615
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.098592,
+        "common": 7,
+        "ref_tokens": 71,
+        "f1": 0.344828
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.672897,
+        "common": 72,
+        "ref_tokens": 107,
+        "f1": 0.7
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win6_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.244898,
+        "common": 12,
+        "ref_tokens": 49,
+        "f1": 0.521739
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.212329,
+        "common": 31,
+        "ref_tokens": 146,
+        "f1": 0.697674
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.0,
+        "common": 0,
+        "ref_tokens": 93,
+        "f1": 0.588235
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.222222
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_14",
+        "exact": false,
+        "prefix_ratio": 0.550562,
+        "common": 49,
+        "ref_tokens": 89,
+        "f1": 0.764706
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.657895,
+        "common": 75,
+        "ref_tokens": 114,
+        "f1": 0.8125
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.235294,
+        "common": 16,
+        "ref_tokens": 68,
+        "f1": 0.5
+      },
+      {
+        "id": "food_supply_49_Контракт___0335...___23902005860260000330002.bin__win1_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.102564,
+        "common": 8,
+        "ref_tokens": 78,
+        "f1": 0.634146
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.111111,
+        "common": 12,
+        "ref_tokens": 108,
+        "f1": 0.517241
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win20_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.0875,
+        "common": 7,
+        "ref_tokens": 80,
+        "f1": 0.444444
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win22_chunk_7",
+        "exact": false,
+        "prefix_ratio": 0.123288,
+        "common": 9,
+        "ref_tokens": 73,
+        "f1": 0.428571
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win13_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.101266,
+        "common": 8,
+        "ref_tokens": 79,
+        "f1": 0.595745
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win18_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135593,
+        "common": 8,
+        "ref_tokens": 59,
+        "f1": 0.765957
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.081633,
+        "common": 8,
+        "ref_tokens": 98,
+        "f1": 0.327273
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.068966,
+        "common": 8,
+        "ref_tokens": 116,
+        "f1": 0.509091
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.05,
+        "common": 8,
+        "ref_tokens": 160,
+        "f1": 0.45
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.072727,
+        "common": 8,
+        "ref_tokens": 110,
+        "f1": 0.551724
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.031915,
+        "common": 3,
+        "ref_tokens": 94,
+        "f1": 0.530612
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.034884,
+        "common": 3,
+        "ref_tokens": 86,
+        "f1": 0.535714
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.027778,
+        "common": 3,
+        "ref_tokens": 108,
+        "f1": 0.52
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.395604,
+        "common": 36,
+        "ref_tokens": 91,
+        "f1": 0.745098
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win28_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.070866,
+        "common": 9,
+        "ref_tokens": 127,
+        "f1": 0.385965
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.32967,
+        "common": 30,
+        "ref_tokens": 91,
+        "f1": 0.791667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.371134,
+        "common": 36,
+        "ref_tokens": 97,
+        "f1": 0.823529
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.02027,
+        "common": 3,
+        "ref_tokens": 148,
+        "f1": 0.470588
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.060606,
+        "common": 8,
+        "ref_tokens": 132,
+        "f1": 0.78125
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.026549,
+        "common": 3,
+        "ref_tokens": 113,
+        "f1": 0.64
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win39_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.581818
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.078431,
+        "common": 8,
+        "ref_tokens": 102,
+        "f1": 0.875
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.050633,
+        "common": 8,
+        "ref_tokens": 158,
+        "f1": 0.647887
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.080808,
+        "common": 8,
+        "ref_tokens": 99,
+        "f1": 0.745098
+      },
+      {
+        "id": "security_services_78_Контракт___09_А...___14027023394250000480002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.053333,
+        "common": 8,
+        "ref_tokens": 150,
+        "f1": 0.627451
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.07767,
+        "common": 8,
+        "ref_tokens": 103,
+        "f1": 0.604651
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.070175,
+        "common": 8,
+        "ref_tokens": 114,
+        "f1": 0.565217
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.118421,
+        "common": 9,
+        "ref_tokens": 76,
+        "f1": 0.416667
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.436364
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.5,
+        "common": 65,
+        "ref_tokens": 130,
+        "f1": 0.962963
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.435897,
+        "common": 34,
+        "ref_tokens": 78,
+        "f1": 0.789474
+      },
+      {
+        "id": "security_services_94_Контракт___ЭК_...___20560000162260000100003.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.127907,
+        "common": 11,
+        "ref_tokens": 86,
+        "f1": 0.914286
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win31_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.172131,
+        "common": 21,
+        "ref_tokens": 122,
+        "f1": 0.866667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.265823,
+        "common": 21,
+        "ref_tokens": 79,
+        "f1": 0.755556
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_16",
+        "exact": false,
+        "prefix_ratio": 0.383721,
+        "common": 33,
+        "ref_tokens": 86,
+        "f1": 0.863636
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.588235
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.588235
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.029412,
+        "common": 3,
+        "ref_tokens": 102,
+        "f1": 0.622222
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.714286
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.1,
+        "common": 10,
+        "ref_tokens": 100,
+        "f1": 0.653061
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.052632,
+        "common": 3,
+        "ref_tokens": 57,
+        "f1": 0.5
+      }
+    ]
+  },
+  "q8_0-ingest": {
+    "summary": {
+      "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-q8_0.gguf",
+      "rows": 60,
+      "file_mb": 609.8,
+      "identical": 0,
+      "identical_rate": 0.0,
+      "prefix_ratio_mean": 0.1484,
+      "prefix_ratio_median": 0.0993,
+      "rows_below_half": 57,
+      "f1_vs_mlx_bf16_stored": 0.5833,
+      "f1_vs_mlx_bf16_recalc": 0.5833
+    },
+    "rows": [
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.111111,
+        "common": 12,
+        "ref_tokens": 108,
+        "f1": 0.37037
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.588235
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.588235
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.029412,
+        "common": 3,
+        "ref_tokens": 102,
+        "f1": 0.622222
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.680851
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.1,
+        "common": 10,
+        "ref_tokens": 100,
+        "f1": 0.705882
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.052632,
+        "common": 3,
+        "ref_tokens": 57,
+        "f1": 0.5
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.02027,
+        "common": 3,
+        "ref_tokens": 148,
+        "f1": 0.428571
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.026549,
+        "common": 3,
+        "ref_tokens": 113,
+        "f1": 0.64
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.395604,
+        "common": 36,
+        "ref_tokens": 91,
+        "f1": 0.745098
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.32967,
+        "common": 30,
+        "ref_tokens": 91,
+        "f1": 0.791667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.371134,
+        "common": 36,
+        "ref_tokens": 97,
+        "f1": 0.823529
+      },
+      {
+        "id": "food_supply_49_Контракт___0335...___23902005860260000330002.bin__win1_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.102564,
+        "common": 8,
+        "ref_tokens": 78,
+        "f1": 0.590909
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.196721,
+        "common": 12,
+        "ref_tokens": 61,
+        "f1": 0.352941
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094595,
+        "common": 7,
+        "ref_tokens": 74,
+        "f1": 0.387097
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.107692,
+        "common": 7,
+        "ref_tokens": 65,
+        "f1": 0.8
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win18_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135593,
+        "common": 8,
+        "ref_tokens": 59,
+        "f1": 0.923077
+      },
+      {
+        "id": "food_supply_44_Контракт___04_2...___34714017938260000030002.bin__win1_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.115789,
+        "common": 11,
+        "ref_tokens": 95,
+        "f1": 0.4
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135417,
+        "common": 13,
+        "ref_tokens": 96,
+        "f1": 0.727273
+      },
+      {
+        "id": "security_services_78_Контракт___09_А...___14027023394250000480002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.053333,
+        "common": 8,
+        "ref_tokens": 150,
+        "f1": 0.583333
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.078431,
+        "common": 8,
+        "ref_tokens": 102,
+        "f1": 0.875
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.050633,
+        "common": 8,
+        "ref_tokens": 158,
+        "f1": 0.71875
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.080808,
+        "common": 8,
+        "ref_tokens": 99,
+        "f1": 0.745098
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.07767,
+        "common": 8,
+        "ref_tokens": 103,
+        "f1": 0.604651
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.070175,
+        "common": 8,
+        "ref_tokens": 114,
+        "f1": 0.565217
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win22_chunk_7",
+        "exact": false,
+        "prefix_ratio": 0.123288,
+        "common": 9,
+        "ref_tokens": 73,
+        "f1": 0.551724
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.5,
+        "common": 65,
+        "ref_tokens": 130,
+        "f1": 0.826087
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.435897,
+        "common": 34,
+        "ref_tokens": 78,
+        "f1": 0.864865
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win39_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.535714
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.060606,
+        "common": 8,
+        "ref_tokens": 132,
+        "f1": 0.689655
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win13_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.101266,
+        "common": 8,
+        "ref_tokens": 79,
+        "f1": 0.625
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.081633,
+        "common": 8,
+        "ref_tokens": 98,
+        "f1": 0.333333
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.068966,
+        "common": 8,
+        "ref_tokens": 116,
+        "f1": 0.509091
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.05,
+        "common": 8,
+        "ref_tokens": 160,
+        "f1": 0.439024
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.072727,
+        "common": 8,
+        "ref_tokens": 110,
+        "f1": 0.508475
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.031915,
+        "common": 3,
+        "ref_tokens": 94,
+        "f1": 0.571429
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.034884,
+        "common": 3,
+        "ref_tokens": 86,
+        "f1": 0.391304
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.027778,
+        "common": 3,
+        "ref_tokens": 108,
+        "f1": 0.434783
+      },
+      {
+        "id": "construction_76_Электронный_кон...___14825001637260001030005.bin__win0_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.028846,
+        "common": 3,
+        "ref_tokens": 104,
+        "f1": 0.416667
+      },
+      {
+        "id": "construction_62_Плат_жное_поруч...___22635244194260010230020.bin__win0_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.363636
+      },
+      {
+        "id": "security_services_94_Контракт___ЭК_...___20560000162260000100003.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.127907,
+        "common": 11,
+        "ref_tokens": 86,
+        "f1": 0.914286
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.672897,
+        "common": 72,
+        "ref_tokens": 107,
+        "f1": 0.7
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.212329,
+        "common": 31,
+        "ref_tokens": 146,
+        "f1": 0.682927
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.204301,
+        "common": 19,
+        "ref_tokens": 93,
+        "f1": 0.588235
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.657895,
+        "common": 75,
+        "ref_tokens": 114,
+        "f1": 0.8125
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.118421,
+        "common": 9,
+        "ref_tokens": 76,
+        "f1": 0.628571
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.436364
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win31_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.172131,
+        "common": 21,
+        "ref_tokens": 122,
+        "f1": 0.866667
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win20_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.0875,
+        "common": 7,
+        "ref_tokens": 80,
+        "f1": 0.432432
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win6_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.244898,
+        "common": 12,
+        "ref_tokens": 49,
+        "f1": 0.521739
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.118644,
+        "common": 7,
+        "ref_tokens": 59,
+        "f1": 0.461538
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.2
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.09589,
+        "common": 7,
+        "ref_tokens": 73,
+        "f1": 0.384615
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.098592,
+        "common": 7,
+        "ref_tokens": 71,
+        "f1": 0.344828
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.368421
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_14",
+        "exact": false,
+        "prefix_ratio": 0.314607,
+        "common": 28,
+        "ref_tokens": 89,
+        "f1": 0.470588
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.235294,
+        "common": 16,
+        "ref_tokens": 68,
+        "f1": 0.482759
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win28_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.070866,
+        "common": 9,
+        "ref_tokens": 127,
+        "f1": 0.385965
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.265823,
+        "common": 21,
+        "ref_tokens": 79,
+        "f1": 0.755556
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_16",
+        "exact": false,
+        "prefix_ratio": 0.197674,
+        "common": 17,
+        "ref_tokens": 86,
+        "f1": 0.744186
+      }
+    ]
+  },
+  "q8_0": {
+    "summary": {
+      "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-q8_0.gguf",
+      "rows": 60,
+      "file_mb": 609.8,
+      "identical": 0,
+      "identical_rate": 0.0,
+      "prefix_ratio_mean": 0.1484,
+      "prefix_ratio_median": 0.0993,
+      "rows_below_half": 57,
+      "f1_vs_mlx_bf16_stored": 0.5833,
+      "f1_vs_mlx_bf16_recalc": 0.5833
+    },
+    "rows": [
+      {
+        "id": "construction_62_Плат_жное_поруч...___22635244194260010230020.bin__win0_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.363636
+      },
+      {
+        "id": "construction_76_Электронный_кон...___14825001637260001030005.bin__win0_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.028846,
+        "common": 3,
+        "ref_tokens": 104,
+        "f1": 0.416667
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135417,
+        "common": 13,
+        "ref_tokens": 96,
+        "f1": 0.727273
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.196721,
+        "common": 12,
+        "ref_tokens": 61,
+        "f1": 0.352941
+      },
+      {
+        "id": "food_supply_44_Контракт___04_2...___34714017938260000030002.bin__win1_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.115789,
+        "common": 11,
+        "ref_tokens": 95,
+        "f1": 0.4
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094595,
+        "common": 7,
+        "ref_tokens": 74,
+        "f1": 0.387097
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.107692,
+        "common": 7,
+        "ref_tokens": 65,
+        "f1": 0.8
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.118644,
+        "common": 7,
+        "ref_tokens": 59,
+        "f1": 0.461538
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.2
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.09589,
+        "common": 7,
+        "ref_tokens": 73,
+        "f1": 0.384615
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.098592,
+        "common": 7,
+        "ref_tokens": 71,
+        "f1": 0.344828
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.672897,
+        "common": 72,
+        "ref_tokens": 107,
+        "f1": 0.7
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win6_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.244898,
+        "common": 12,
+        "ref_tokens": 49,
+        "f1": 0.521739
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.212329,
+        "common": 31,
+        "ref_tokens": 146,
+        "f1": 0.682927
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.204301,
+        "common": 19,
+        "ref_tokens": 93,
+        "f1": 0.588235
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.368421
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_14",
+        "exact": false,
+        "prefix_ratio": 0.314607,
+        "common": 28,
+        "ref_tokens": 89,
+        "f1": 0.470588
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.657895,
+        "common": 75,
+        "ref_tokens": 114,
+        "f1": 0.8125
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.235294,
+        "common": 16,
+        "ref_tokens": 68,
+        "f1": 0.482759
+      },
+      {
+        "id": "food_supply_49_Контракт___0335...___23902005860260000330002.bin__win1_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.102564,
+        "common": 8,
+        "ref_tokens": 78,
+        "f1": 0.590909
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.111111,
+        "common": 12,
+        "ref_tokens": 108,
+        "f1": 0.37037
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win20_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.0875,
+        "common": 7,
+        "ref_tokens": 80,
+        "f1": 0.432432
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win22_chunk_7",
+        "exact": false,
+        "prefix_ratio": 0.123288,
+        "common": 9,
+        "ref_tokens": 73,
+        "f1": 0.551724
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win13_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.101266,
+        "common": 8,
+        "ref_tokens": 79,
+        "f1": 0.625
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win18_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135593,
+        "common": 8,
+        "ref_tokens": 59,
+        "f1": 0.923077
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.081633,
+        "common": 8,
+        "ref_tokens": 98,
+        "f1": 0.333333
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.068966,
+        "common": 8,
+        "ref_tokens": 116,
+        "f1": 0.509091
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.05,
+        "common": 8,
+        "ref_tokens": 160,
+        "f1": 0.439024
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.072727,
+        "common": 8,
+        "ref_tokens": 110,
+        "f1": 0.508475
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.031915,
+        "common": 3,
+        "ref_tokens": 94,
+        "f1": 0.571429
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.034884,
+        "common": 3,
+        "ref_tokens": 86,
+        "f1": 0.391304
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.027778,
+        "common": 3,
+        "ref_tokens": 108,
+        "f1": 0.434783
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.395604,
+        "common": 36,
+        "ref_tokens": 91,
+        "f1": 0.745098
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win28_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.070866,
+        "common": 9,
+        "ref_tokens": 127,
+        "f1": 0.385965
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.32967,
+        "common": 30,
+        "ref_tokens": 91,
+        "f1": 0.791667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.371134,
+        "common": 36,
+        "ref_tokens": 97,
+        "f1": 0.823529
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.02027,
+        "common": 3,
+        "ref_tokens": 148,
+        "f1": 0.428571
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.060606,
+        "common": 8,
+        "ref_tokens": 132,
+        "f1": 0.689655
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.026549,
+        "common": 3,
+        "ref_tokens": 113,
+        "f1": 0.64
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win39_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.535714
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.078431,
+        "common": 8,
+        "ref_tokens": 102,
+        "f1": 0.875
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.050633,
+        "common": 8,
+        "ref_tokens": 158,
+        "f1": 0.71875
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.080808,
+        "common": 8,
+        "ref_tokens": 99,
+        "f1": 0.745098
+      },
+      {
+        "id": "security_services_78_Контракт___09_А...___14027023394250000480002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.053333,
+        "common": 8,
+        "ref_tokens": 150,
+        "f1": 0.583333
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.07767,
+        "common": 8,
+        "ref_tokens": 103,
+        "f1": 0.604651
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.070175,
+        "common": 8,
+        "ref_tokens": 114,
+        "f1": 0.565217
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.118421,
+        "common": 9,
+        "ref_tokens": 76,
+        "f1": 0.628571
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.436364
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.5,
+        "common": 65,
+        "ref_tokens": 130,
+        "f1": 0.826087
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.435897,
+        "common": 34,
+        "ref_tokens": 78,
+        "f1": 0.864865
+      },
+      {
+        "id": "security_services_94_Контракт___ЭК_...___20560000162260000100003.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.127907,
+        "common": 11,
+        "ref_tokens": 86,
+        "f1": 0.914286
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win31_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.172131,
+        "common": 21,
+        "ref_tokens": 122,
+        "f1": 0.866667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.265823,
+        "common": 21,
+        "ref_tokens": 79,
+        "f1": 0.755556
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_16",
+        "exact": false,
+        "prefix_ratio": 0.197674,
+        "common": 17,
+        "ref_tokens": 86,
+        "f1": 0.744186
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.588235
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.588235
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.029412,
+        "common": 3,
+        "ref_tokens": 102,
+        "f1": 0.622222
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.680851
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.1,
+        "common": 10,
+        "ref_tokens": 100,
+        "f1": 0.705882
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.052632,
+        "common": 3,
+        "ref_tokens": 57,
+        "f1": 0.5
+      }
+    ]
+  },
+  "q6_k": {
+    "summary": {
+      "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-q6_k.gguf",
+      "rows": 60,
+      "file_mb": 472.2,
+      "identical": 0,
+      "identical_rate": 0.0,
+      "prefix_ratio_mean": 0.1497,
+      "prefix_ratio_median": 0.0953,
+      "rows_below_half": 57,
+      "f1_vs_mlx_bf16_stored": 0.5836,
+      "f1_vs_mlx_bf16_recalc": 0.5836
+    },
+    "rows": [
+      {
+        "id": "construction_62_Плат_жное_поруч...___22635244194260010230020.bin__win0_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.363636
+      },
+      {
+        "id": "construction_76_Электронный_кон...___14825001637260001030005.bin__win0_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.55
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135417,
+        "common": 13,
+        "ref_tokens": 96,
+        "f1": 0.692308
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.196721,
+        "common": 12,
+        "ref_tokens": 61,
+        "f1": 0.324324
+      },
+      {
+        "id": "food_supply_44_Контракт___04_2...___34714017938260000030002.bin__win1_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094737,
+        "common": 9,
+        "ref_tokens": 95,
+        "f1": 0.432432
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094595,
+        "common": 7,
+        "ref_tokens": 74,
+        "f1": 0.647059
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.107692,
+        "common": 7,
+        "ref_tokens": 65,
+        "f1": 0.8
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.118644,
+        "common": 7,
+        "ref_tokens": 59,
+        "f1": 0.461538
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.205128
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.09589,
+        "common": 7,
+        "ref_tokens": 73,
+        "f1": 0.2
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.098592,
+        "common": 7,
+        "ref_tokens": 71,
+        "f1": 0.30303
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.476636,
+        "common": 51,
+        "ref_tokens": 107,
+        "f1": 0.702703
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win6_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.244898,
+        "common": 12,
+        "ref_tokens": 49,
+        "f1": 0.521739
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.212329,
+        "common": 31,
+        "ref_tokens": 146,
+        "f1": 0.772727
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.0,
+        "common": 0,
+        "ref_tokens": 93,
+        "f1": 0.685714
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.421053
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_14",
+        "exact": false,
+        "prefix_ratio": 0.550562,
+        "common": 49,
+        "ref_tokens": 89,
+        "f1": 0.774194
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.122807,
+        "common": 14,
+        "ref_tokens": 114,
+        "f1": 0.357143
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.294118,
+        "common": 20,
+        "ref_tokens": 68,
+        "f1": 0.545455
+      },
+      {
+        "id": "food_supply_49_Контракт___0335...___23902005860260000330002.bin__win1_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.102564,
+        "common": 8,
+        "ref_tokens": 78,
+        "f1": 0.634146
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.111111,
+        "common": 12,
+        "ref_tokens": 108,
+        "f1": 0.528302
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win20_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.0875,
+        "common": 7,
+        "ref_tokens": 80,
+        "f1": 0.611111
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win22_chunk_7",
+        "exact": false,
+        "prefix_ratio": 0.123288,
+        "common": 9,
+        "ref_tokens": 73,
+        "f1": 0.482759
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win13_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.101266,
+        "common": 8,
+        "ref_tokens": 79,
+        "f1": 0.641509
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win18_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135593,
+        "common": 8,
+        "ref_tokens": 59,
+        "f1": 0.923077
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.081633,
+        "common": 8,
+        "ref_tokens": 98,
+        "f1": 0.327273
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.068966,
+        "common": 8,
+        "ref_tokens": 116,
+        "f1": 0.631579
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.05,
+        "common": 8,
+        "ref_tokens": 160,
+        "f1": 0.444444
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.072727,
+        "common": 8,
+        "ref_tokens": 110,
+        "f1": 0.533333
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.074468,
+        "common": 7,
+        "ref_tokens": 94,
+        "f1": 0.55814
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.034884,
+        "common": 3,
+        "ref_tokens": 86,
+        "f1": 0.488889
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.064815,
+        "common": 7,
+        "ref_tokens": 108,
+        "f1": 0.553191
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.395604,
+        "common": 36,
+        "ref_tokens": 91,
+        "f1": 0.784314
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win28_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.070866,
+        "common": 9,
+        "ref_tokens": 127,
+        "f1": 0.528302
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.32967,
+        "common": 30,
+        "ref_tokens": 91,
+        "f1": 0.791667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.371134,
+        "common": 36,
+        "ref_tokens": 97,
+        "f1": 0.823529
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.02027,
+        "common": 3,
+        "ref_tokens": 148,
+        "f1": 0.44
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.060606,
+        "common": 8,
+        "ref_tokens": 132,
+        "f1": 0.689655
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.026549,
+        "common": 3,
+        "ref_tokens": 113,
+        "f1": 0.425532
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win39_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.592593
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.088235,
+        "common": 9,
+        "ref_tokens": 102,
+        "f1": 0.734694
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.050633,
+        "common": 8,
+        "ref_tokens": 158,
+        "f1": 0.666667
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.080808,
+        "common": 8,
+        "ref_tokens": 99,
+        "f1": 0.892857
+      },
+      {
+        "id": "security_services_78_Контракт___09_А...___14027023394250000480002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.053333,
+        "common": 8,
+        "ref_tokens": 150,
+        "f1": 0.5
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.07767,
+        "common": 8,
+        "ref_tokens": 103,
+        "f1": 0.618182
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.078947,
+        "common": 9,
+        "ref_tokens": 114,
+        "f1": 0.377358
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.118421,
+        "common": 9,
+        "ref_tokens": 76,
+        "f1": 0.468085
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.436364
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.5,
+        "common": 65,
+        "ref_tokens": 130,
+        "f1": 0.826087
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.435897,
+        "common": 34,
+        "ref_tokens": 78,
+        "f1": 0.789474
+      },
+      {
+        "id": "security_services_94_Контракт___ЭК_...___20560000162260000100003.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.127907,
+        "common": 11,
+        "ref_tokens": 86,
+        "f1": 0.666667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win31_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.172131,
+        "common": 21,
+        "ref_tokens": 122,
+        "f1": 0.8
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.683544,
+        "common": 54,
+        "ref_tokens": 79,
+        "f1": 0.761905
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_16",
+        "exact": false,
+        "prefix_ratio": 0.383721,
+        "common": 33,
+        "ref_tokens": 86,
+        "f1": 0.863636
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.536585
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.416667
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.029412,
+        "common": 3,
+        "ref_tokens": 102,
+        "f1": 0.478261
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.780488
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.1,
+        "common": 10,
+        "ref_tokens": 100,
+        "f1": 0.692308
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.052632,
+        "common": 3,
+        "ref_tokens": 57,
+        "f1": 0.514286
+      }
+    ]
+  },
+  "q5_k_m": {
+    "summary": {
+      "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-q5_k_m.gguf",
+      "rows": 60,
+      "file_mb": 423.8,
+      "identical": 0,
+      "identical_rate": 0.0,
+      "prefix_ratio_mean": 0.1412,
+      "prefix_ratio_median": 0.091,
+      "rows_below_half": 58,
+      "f1_vs_mlx_bf16_stored": 0.5929,
+      "f1_vs_mlx_bf16_recalc": 0.5929
+    },
+    "rows": [
+      {
+        "id": "construction_62_Плат_жное_поруч...___22635244194260010230020.bin__win0_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.413793
+      },
+      {
+        "id": "construction_76_Электронный_кон...___14825001637260001030005.bin__win0_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.604651
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.135417,
+        "common": 13,
+        "ref_tokens": 96,
+        "f1": 0.75
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.196721,
+        "common": 12,
+        "ref_tokens": 61,
+        "f1": 0.352941
+      },
+      {
+        "id": "food_supply_44_Контракт___04_2...___34714017938260000030002.bin__win1_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.210526,
+        "common": 20,
+        "ref_tokens": 95,
+        "f1": 0.451613
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094595,
+        "common": 7,
+        "ref_tokens": 74,
+        "f1": 0.588235
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.107692,
+        "common": 7,
+        "ref_tokens": 65,
+        "f1": 0.8
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.118644,
+        "common": 7,
+        "ref_tokens": 59,
+        "f1": 0.16
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.363636
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.09589,
+        "common": 7,
+        "ref_tokens": 73,
+        "f1": 0.384615
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.098592,
+        "common": 7,
+        "ref_tokens": 71,
+        "f1": 0.4
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.691589,
+        "common": 74,
+        "ref_tokens": 107,
+        "f1": 0.736842
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win6_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.244898,
+        "common": 12,
+        "ref_tokens": 49,
+        "f1": 0.384615
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.212329,
+        "common": 31,
+        "ref_tokens": 146,
+        "f1": 0.697674
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.0,
+        "common": 0,
+        "ref_tokens": 93,
+        "f1": 0.611111
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.30303
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_14",
+        "exact": false,
+        "prefix_ratio": 0.314607,
+        "common": 28,
+        "ref_tokens": 89,
+        "f1": 0.727273
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.649123,
+        "common": 74,
+        "ref_tokens": 114,
+        "f1": 0.75
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.235294,
+        "common": 16,
+        "ref_tokens": 68,
+        "f1": 0.5625
+      },
+      {
+        "id": "food_supply_49_Контракт___0335...___23902005860260000330002.bin__win1_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.038462,
+        "common": 3,
+        "ref_tokens": 78,
+        "f1": 0.25641
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.027778,
+        "common": 3,
+        "ref_tokens": 108,
+        "f1": 0.470588
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win20_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.0875,
+        "common": 7,
+        "ref_tokens": 80,
+        "f1": 0.810811
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win22_chunk_7",
+        "exact": false,
+        "prefix_ratio": 0.123288,
+        "common": 9,
+        "ref_tokens": 73,
+        "f1": 0.4375
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win13_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.101266,
+        "common": 8,
+        "ref_tokens": 79,
+        "f1": 0.641509
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win18_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.050847,
+        "common": 3,
+        "ref_tokens": 59,
+        "f1": 0.555556
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.081633,
+        "common": 8,
+        "ref_tokens": 98,
+        "f1": 0.642857
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.068966,
+        "common": 8,
+        "ref_tokens": 116,
+        "f1": 0.736842
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.05,
+        "common": 8,
+        "ref_tokens": 160,
+        "f1": 0.545455
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.072727,
+        "common": 8,
+        "ref_tokens": 110,
+        "f1": 0.821429
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.074468,
+        "common": 7,
+        "ref_tokens": 94,
+        "f1": 0.45
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.081395,
+        "common": 7,
+        "ref_tokens": 86,
+        "f1": 0.590909
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.064815,
+        "common": 7,
+        "ref_tokens": 108,
+        "f1": 0.468085
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.384615,
+        "common": 35,
+        "ref_tokens": 91,
+        "f1": 0.816327
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win28_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.070866,
+        "common": 9,
+        "ref_tokens": 127,
+        "f1": 0.490566
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.395604,
+        "common": 36,
+        "ref_tokens": 91,
+        "f1": 0.745098
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.175258,
+        "common": 17,
+        "ref_tokens": 97,
+        "f1": 0.695652
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.02027,
+        "common": 3,
+        "ref_tokens": 148,
+        "f1": 0.465116
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.060606,
+        "common": 8,
+        "ref_tokens": 132,
+        "f1": 0.689655
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.026549,
+        "common": 3,
+        "ref_tokens": 113,
+        "f1": 0.55814
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win39_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.603774
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.078431,
+        "common": 8,
+        "ref_tokens": 102,
+        "f1": 0.808511
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.050633,
+        "common": 8,
+        "ref_tokens": 158,
+        "f1": 0.698413
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.080808,
+        "common": 8,
+        "ref_tokens": 99,
+        "f1": 0.981818
+      },
+      {
+        "id": "security_services_78_Контракт___09_А...___14027023394250000480002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.053333,
+        "common": 8,
+        "ref_tokens": 150,
+        "f1": 0.509804
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.07767,
+        "common": 8,
+        "ref_tokens": 103,
+        "f1": 0.690909
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.070175,
+        "common": 8,
+        "ref_tokens": 114,
+        "f1": 0.526316
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.118421,
+        "common": 9,
+        "ref_tokens": 76,
+        "f1": 0.444444
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.436364
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.407692,
+        "common": 53,
+        "ref_tokens": 130,
+        "f1": 0.90566
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.435897,
+        "common": 34,
+        "ref_tokens": 78,
+        "f1": 0.857143
+      },
+      {
+        "id": "security_services_94_Контракт___ЭК_...___20560000162260000100003.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.127907,
+        "common": 11,
+        "ref_tokens": 86,
+        "f1": 0.75
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win31_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.139344,
+        "common": 17,
+        "ref_tokens": 122,
+        "f1": 0.705882
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.21519,
+        "common": 17,
+        "ref_tokens": 79,
+        "f1": 0.756757
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_16",
+        "exact": false,
+        "prefix_ratio": 0.197674,
+        "common": 17,
+        "ref_tokens": 86,
+        "f1": 0.744186
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.101449,
+        "common": 7,
+        "ref_tokens": 69,
+        "f1": 0.625
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.101449,
+        "common": 7,
+        "ref_tokens": 69,
+        "f1": 0.606061
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.068627,
+        "common": 7,
+        "ref_tokens": 102,
+        "f1": 0.428571
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.042254,
+        "common": 3,
+        "ref_tokens": 71,
+        "f1": 0.529412
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.03,
+        "common": 3,
+        "ref_tokens": 100,
+        "f1": 0.571429
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.122807,
+        "common": 7,
+        "ref_tokens": 57,
+        "f1": 0.461538
+      }
+    ]
+  },
+  "q4_k_m": {
+    "summary": {
+      "gguf": "/Users/yegor/.cache/contextual-chunks/gguf/qwen3-0.6b-contextual-chunks-q4_k_m.gguf",
+      "rows": 60,
+      "file_mb": 378.3,
+      "identical": 0,
+      "identical_rate": 0.0,
+      "prefix_ratio_mean": 0.1651,
+      "prefix_ratio_median": 0.121,
+      "rows_below_half": 59,
+      "f1_vs_mlx_bf16_stored": 0.5546,
+      "f1_vs_mlx_bf16_recalc": 0.5546
+    },
+    "rows": [
+      {
+        "id": "construction_62_Плат_жное_поруч...___22635244194260010230020.bin__win0_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.387097
+      },
+      {
+        "id": "construction_76_Электронный_кон...___14825001637260001030005.bin__win0_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.028846,
+        "common": 3,
+        "ref_tokens": 104,
+        "f1": 0.734694
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.125,
+        "common": 12,
+        "ref_tokens": 96,
+        "f1": 0.347826
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.196721,
+        "common": 12,
+        "ref_tokens": 61,
+        "f1": 0.352941
+      },
+      {
+        "id": "food_supply_44_Контракт___04_2...___34714017938260000030002.bin__win1_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.210526,
+        "common": 20,
+        "ref_tokens": 95,
+        "f1": 0.413793
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.094595,
+        "common": 7,
+        "ref_tokens": 74,
+        "f1": 0.470588
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win4_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.107692,
+        "common": 7,
+        "ref_tokens": 65,
+        "f1": 0.625
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.118644,
+        "common": 7,
+        "ref_tokens": 59,
+        "f1": 0.222222
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.067308,
+        "common": 7,
+        "ref_tokens": 104,
+        "f1": 0.372093
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.09589,
+        "common": 7,
+        "ref_tokens": 73,
+        "f1": 0.266667
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.098592,
+        "common": 7,
+        "ref_tokens": 71,
+        "f1": 0.166667
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.224299,
+        "common": 24,
+        "ref_tokens": 107,
+        "f1": 0.411765
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win6_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.244898,
+        "common": 12,
+        "ref_tokens": 49,
+        "f1": 0.5
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.164384,
+        "common": 24,
+        "ref_tokens": 146,
+        "f1": 0.52381
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.204301,
+        "common": 19,
+        "ref_tokens": 93,
+        "f1": 0.647059
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.210526
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_14",
+        "exact": false,
+        "prefix_ratio": 0.314607,
+        "common": 28,
+        "ref_tokens": 89,
+        "f1": 0.689655
+      },
+      {
+        "id": "food_supply_45_Печатная_форма_...___34714017938260000030003.bin__win0_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.22807,
+        "common": 26,
+        "ref_tokens": 114,
+        "f1": 0.787879
+      },
+      {
+        "id": "food_supply_41_Печатная_форма_...___27816160467250000240004.bin__win3_chunk_20",
+        "exact": false,
+        "prefix_ratio": 0.235294,
+        "common": 16,
+        "ref_tokens": 68,
+        "f1": 0.413793
+      },
+      {
+        "id": "food_supply_49_Контракт___0335...___23902005860260000330002.bin__win1_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.102564,
+        "common": 8,
+        "ref_tokens": 78,
+        "f1": 0.391304
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.055556,
+        "common": 6,
+        "ref_tokens": 108,
+        "f1": 0.470588
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win20_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.0875,
+        "common": 7,
+        "ref_tokens": 80,
+        "f1": 0.4375
+      },
+      {
+        "id": "food_supply_39_Контракт___0172...___27816160467250000240002.bin__win22_chunk_7",
+        "exact": false,
+        "prefix_ratio": 0.123288,
+        "common": 9,
+        "ref_tokens": 73,
+        "f1": 0.4
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win13_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.316456,
+        "common": 25,
+        "ref_tokens": 79,
+        "f1": 0.695652
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win18_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.372881,
+        "common": 22,
+        "ref_tokens": 59,
+        "f1": 0.782609
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.22449,
+        "common": 22,
+        "ref_tokens": 98,
+        "f1": 0.413793
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.215517,
+        "common": 25,
+        "ref_tokens": 116,
+        "f1": 0.571429
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.05625,
+        "common": 9,
+        "ref_tokens": 160,
+        "f1": 0.324324
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win19_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.081818,
+        "common": 9,
+        "ref_tokens": 110,
+        "f1": 0.724138
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.031915,
+        "common": 3,
+        "ref_tokens": 94,
+        "f1": 0.604651
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.034884,
+        "common": 3,
+        "ref_tokens": 86,
+        "f1": 0.711111
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win9_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.027778,
+        "common": 3,
+        "ref_tokens": 108,
+        "f1": 0.423077
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.32967,
+        "common": 30,
+        "ref_tokens": 91,
+        "f1": 0.8
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win28_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.047244,
+        "common": 6,
+        "ref_tokens": 127,
+        "f1": 0.607143
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.32967,
+        "common": 30,
+        "ref_tokens": 91,
+        "f1": 0.8
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win11_chunk_9",
+        "exact": false,
+        "prefix_ratio": 0.371134,
+        "common": 36,
+        "ref_tokens": 97,
+        "f1": 0.711864
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.074324,
+        "common": 11,
+        "ref_tokens": 148,
+        "f1": 0.521739
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.189394,
+        "common": 25,
+        "ref_tokens": 132,
+        "f1": 0.655172
+      },
+      {
+        "id": "pharma_tablets_31_Контракт___0318...___22302029673260002340002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.584071,
+        "common": 66,
+        "ref_tokens": 113,
+        "f1": 0.772727
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win39_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.276786,
+        "common": 31,
+        "ref_tokens": 112,
+        "f1": 0.533333
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.058824,
+        "common": 6,
+        "ref_tokens": 102,
+        "f1": 0.566038
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_4",
+        "exact": false,
+        "prefix_ratio": 0.037975,
+        "common": 6,
+        "ref_tokens": 158,
+        "f1": 0.65625
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win47_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.060606,
+        "common": 6,
+        "ref_tokens": 99,
+        "f1": 0.607143
+      },
+      {
+        "id": "security_services_78_Контракт___09_А...___14027023394250000480002.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.053333,
+        "common": 8,
+        "ref_tokens": 150,
+        "f1": 0.56
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.058252,
+        "common": 6,
+        "ref_tokens": 103,
+        "f1": 0.355556
+      },
+      {
+        "id": "it_hardware_20_Контракт_с_учет...___29204576208260000070015.bin__win53_chunk_5",
+        "exact": false,
+        "prefix_ratio": 0.192982,
+        "common": 22,
+        "ref_tokens": 114,
+        "f1": 0.571429
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_0",
+        "exact": false,
+        "prefix_ratio": 0.118421,
+        "common": 9,
+        "ref_tokens": 76,
+        "f1": 0.409091
+      },
+      {
+        "id": "it_hardware_18_Электронный_кон...___29204576208260000070004.bin__win60_chunk_2",
+        "exact": false,
+        "prefix_ratio": 0.080357,
+        "common": 9,
+        "ref_tokens": 112,
+        "f1": 0.391304
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.407692,
+        "common": 53,
+        "ref_tokens": 130,
+        "f1": 0.846154
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win24_chunk_13",
+        "exact": false,
+        "prefix_ratio": 0.423077,
+        "common": 33,
+        "ref_tokens": 78,
+        "f1": 0.54902
+      },
+      {
+        "id": "security_services_94_Контракт___ЭК_...___20560000162260000100003.bin__win0_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.127907,
+        "common": 11,
+        "ref_tokens": 86,
+        "f1": 0.882353
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win31_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.237705,
+        "common": 29,
+        "ref_tokens": 122,
+        "f1": 0.830189
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.367089,
+        "common": 29,
+        "ref_tokens": 79,
+        "f1": 0.7
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win34_chunk_16",
+        "exact": false,
+        "prefix_ratio": 0.383721,
+        "common": 33,
+        "ref_tokens": 86,
+        "f1": 0.863636
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_1",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.634146
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_3",
+        "exact": false,
+        "prefix_ratio": 0.043478,
+        "common": 3,
+        "ref_tokens": 69,
+        "f1": 0.634146
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_6",
+        "exact": false,
+        "prefix_ratio": 0.029412,
+        "common": 3,
+        "ref_tokens": 102,
+        "f1": 0.444444
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_8",
+        "exact": false,
+        "prefix_ratio": 0.140845,
+        "common": 10,
+        "ref_tokens": 71,
+        "f1": 0.651163
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_10",
+        "exact": false,
+        "prefix_ratio": 0.1,
+        "common": 10,
+        "ref_tokens": 100,
+        "f1": 0.701754
+      },
+      {
+        "id": "it_hardware_17_Печатная_форма_...___29204576208260000070003.bin__win40_chunk_11",
+        "exact": false,
+        "prefix_ratio": 0.052632,
+        "common": 3,
+        "ref_tokens": 57,
+        "f1": 0.52381
+      }
+    ]
+  },
+  "matrix_prefix_ratio": {
+    "bf16": {
+      "bf16": 1.0,
+      "f16": 0.1744,
+      "q8_0": 0.1757,
+      "q8_0-ingest": 0.1757,
+      "q6_k": 0.1768,
+      "q5_k_m": 0.1669,
+      "q4_k_m": 0.2038
+    },
+    "f16": {
+      "bf16": 0.1744,
+      "f16": 1.0,
+      "q8_0": 0.7265,
+      "q8_0-ingest": 0.7265,
+      "q6_k": 0.5144,
+      "q5_k_m": 0.3508,
+      "q4_k_m": 0.2592
+    },
+    "q8_0": {
+      "bf16": 0.1757,
+      "f16": 0.7265,
+      "q8_0": 1.0,
+      "q8_0-ingest": 1.0,
+      "q6_k": 0.506,
+      "q5_k_m": 0.3874,
+      "q4_k_m": 0.2627
+    },
+    "q8_0-ingest": {
+      "bf16": 0.1757,
+      "f16": 0.7265,
+      "q8_0": 1.0,
+      "q8_0-ingest": 1.0,
+      "q6_k": 0.506,
+      "q5_k_m": 0.3874,
+      "q4_k_m": 0.2627
+    },
+    "q6_k": {
+      "bf16": 0.1768,
+      "f16": 0.5144,
+      "q8_0": 0.506,
+      "q8_0-ingest": 0.506,
+      "q6_k": 1.0,
+      "q5_k_m": 0.3505,
+      "q4_k_m": 0.2383
+    },
+    "q5_k_m": {
+      "bf16": 0.1669,
+      "f16": 0.3508,
+      "q8_0": 0.3874,
+      "q8_0-ingest": 0.3874,
+      "q6_k": 0.3505,
+      "q5_k_m": 1.0,
+      "q4_k_m": 0.2068
+    },
+    "q4_k_m": {
+      "bf16": 0.2038,
+      "f16": 0.2592,
+      "q8_0": 0.2627,
+      "q8_0-ingest": 0.2627,
+      "q6_k": 0.2383,
+      "q5_k_m": 0.2068,
+      "q4_k_m": 1.0
+    }
+  },
+  "pairs": {
+    "bf16 vs f16": {
+      "rows": 60,
+      "identical": 0,
+      "common_tokens_mean": 14.55,
+      "common_tokens_median": 8.0,
+      "prefix_ratio_mean": 0.1744
+    },
+    "f16 vs q8_0": {
+      "rows": 60,
+      "identical": 21,
+      "common_tokens_mean": 58.47,
+      "common_tokens_median": 59.5,
+      "prefix_ratio_mean": 0.7265
+    },
+    "f16 vs q6_k": {
+      "rows": 60,
+      "identical": 9,
+      "common_tokens_mean": 40.78,
+      "common_tokens_median": 40.5,
+      "prefix_ratio_mean": 0.5144
+    },
+    "f16 vs q5_k_m": {
+      "rows": 60,
+      "identical": 3,
+      "common_tokens_mean": 27.43,
+      "common_tokens_median": 17.5,
+      "prefix_ratio_mean": 0.3508
+    },
+    "f16 vs q4_k_m": {
+      "rows": 60,
+      "identical": 0,
+      "common_tokens_mean": 19.38,
+      "common_tokens_median": 15.5,
+      "prefix_ratio_mean": 0.2592
+    },
+    "q8_0 vs q4_k_m": {
+      "rows": 60,
+      "identical": 0,
+      "common_tokens_mean": 18.82,
+      "common_tokens_median": 17.0,
+      "prefix_ratio_mean": 0.2627
+    },
+    "bf16 vs q8_0": {
+      "rows": 60,
+      "identical": 0,
+      "common_tokens_mean": 14.07,
+      "common_tokens_median": 8.0,
+      "prefix_ratio_mean": 0.1757
+    }
+  },
+  "reference_note": "bf16-эталон — greedy-прогон transformers (reports/03), не llama.cpp. Токен-в-токен он не воспроизводится ни одним квантом, включая f16 (0/60 идентичных, общий префикс ~15 токенов), потому что первое расхождение всегда попадает в почти-ничью в логитах (p(top-1) ~0.5). Поэтому word-F1 против эталона — смысловая близость, а не верность конверсии; верность показывает лестница внутри llama.cpp: f16 -> q8_0 -> q6_k -> ..."
+}

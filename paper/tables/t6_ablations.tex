@@ -1,0 +1,35 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Retrieval ablations computed in-memory on the indexed vectors (teacher arm F, student arm G; 234 queries, dense-only unless noted). $\Delta$ is student $-$ teacher.}
+\label{tab:ablations}
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{Teacher (F)} & \multicolumn{2}{c}{Student (G)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Setting & R@10 & MRR@10 & R@10 & MRR@10 \\
+\midrule
+\multicolumn{5}{l}{\emph{MRL dimension}} \\
+\quad 1024 & 0.658 & 0.328 & 0.615 & 0.341 \\
+\quad 512 & 0.667 & 0.328 & 0.641 & 0.354 \\
+\quad 256 & 0.568 & 0.303 & 0.611 & 0.332 \\
+\quad 128 & 0.573 & 0.296 & 0.586 & 0.302 \\
+\addlinespace[2pt]
+\multicolumn{5}{l}{\emph{Query instruction}} \\
+\quad English & 0.658 & 0.328 & 0.615 & 0.341 \\
+\quad Russian & 0.658 & 0.331 & 0.650 & 0.352 \\
+\addlinespace[2pt]
+\multicolumn{5}{l}{\emph{Hybrid fusion (RRF)}} \\
+\quad dense-only & 0.658 & 0.328 & 0.615 & 0.341 \\
+\quad BM25-only & 0.380 & 0.189 & 0.372 & 0.184 \\
+\quad $k{=}1$, 1:1 & 0.611 & 0.304 & 0.603 & 0.305 \\
+\quad $k{=}10$, 1:1 & 0.581 & 0.295 & 0.607 & 0.292 \\
+\quad $k{=}60$, 1:1 & 0.530 & 0.289 & 0.517 & 0.266 \\
+\quad $k{=}60$, 1:0.25 & 0.645 & 0.314 & 0.603 & 0.297 \\
+\addlinespace[2pt]
+\multicolumn{5}{l}{\emph{Best combination}} \\
+\quad d=512, Russian & 0.675 & 0.331 & 0.658 & 0.363 \\
+\addlinespace[2pt]
+\bottomrule
+\end{tabular}
+\end{table}

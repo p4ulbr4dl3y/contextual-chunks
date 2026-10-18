@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contextual-chunks"
+version = "0.1.0"
+description = "Reranker-free contextual retrieval on the edge: dataset pipeline, Qwen3-0.6B LoRA distillation, retrieval harness and paper"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Egor Surovtsev" }]
+keywords = [
+    "contextual retrieval",
+    "retrieval-augmented generation",
+    "knowledge distillation",
+    "on-device inference",
+    "reranking",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+]
+
+# The pipeline proper: chunking, prompt building, teacher labelling, HF export.
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "datasets>=5.1.0",
+    "httpx>=0.28.0",
+    "lxml>=6.1.3",
+    "pillow>=12.3.0",
+    "pyarrow>=25.0.1",
+    "python-docx>=1.2.0",
+    "tokenizers>=0.20.0",
+]
+
+[project.optional-dependencies]
+# OCR of the raw PDFs and DOCX files (the ingest step that produced the corpus).
+ocr = [
+    "paddleocr>=3.7.0",
+    "paddlepaddle>=3.3.1",
+    "paddlex[ocr]>=3.7.2",
+]
+# Retrieval harness: Qwen3-Embedding + Qwen3-Reranker, BM25, local Qdrant.
+retrieval = [
+    "torch>=2.8.0",
+    "sentence-transformers>=5.0.0",
+    "transformers>=4.50.0",
+    "huggingface-hub>=0.30.0",
+    "qdrant-client>=1.15.0",
+    "fastembed>=0.7.0",
+    "rank-bm25>=0.2.2",
+    "snowballstemmer>=3.0.0",
+    "numpy>=2.0.0",
+]
+# Apple-silicon runtime: MLX embedding, reranking and student inference.
+mlx = [
+    "mlx-lm>=0.32.0",
+    "mlx-vlm>=0.7.6",
+]
+# LoRA SFT. The published run happened on Colab (Linux + CUDA); unsloth has no
+# macOS wheels, so the dependency is marked accordingly.
+train = [
+    "torch>=2.8.0",
+    "transformers>=4.50.0",
+    "peft>=0.21.0",
+    "trl>=0.20.0",
+    "unsloth; sys_platform == 'linux'",
+]
+# GGUF evaluation. Conversion itself is llama.cpp's job, not a Python package.
+gguf = [
+    "huggingface-hub>=0.30.0",
+    "numpy>=2.0.0",
+    "transformers>=4.50.0",
+]
+# Regenerating the tables and figures of the paper.
+paper = ["matplotlib>=3.10.0"]
+
+dev = ["pytest>=8.0", "ruff>=0.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]
+ignore = [
+    "E501",  # long lines are allowed in docstring tables and LaTeX snippets
+]

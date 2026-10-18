@@ -1,0 +1,49 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We set out to test contextual retrieval on a small, homogeneous, non-English
+corpus with a laptop as the deployment target, and arrived at a simpler pipeline
+than the published recipe.
+
+What carries the pipeline is the context, not the reranker. On the same sixty
+queries, contextualized chunks with dense-only retrieval reach recall@10 of
+0.550 in 40.5~ms and the distilled on-device context reaches 0.600 in 41.4~ms,
+while the same index behind a 0.6B cross-encoder reaches 0.650 in 54.7~s. The
+0.05 gap in recall@10 between the distilled reranker-free arm and the reranked
+arm has a paired bootstrap interval that includes zero, which makes the reranker
+optional at a factor of 1{,}322 in median latency. Where the index is flat, the
+reranker cannot help at all: it spends 43~s per query to return the same recall
+as the dense-only flat arm, which answers in 39~ms.
+
+The contextual enrichment itself moves to the target device without much loss.
+A 0.6B LoRA student reproduces the teacher's contexts with a mean word-level F1
+of 0.537 against 0.189 for the untrained base model, regenerates the whole
+corpus in 4.49~h behind a prefix key/value cache, and costs nothing per run.
+Retrieval quality is essentially unchanged, and two cheap levers, truncation to
+512 dimensions and a Russian query instruction, raise the student pipeline to
+the teacher baseline at half the vector size.
+
+Two components of the standard recipe did not survive the move to this corpus.
+BM25 fusion degrades every configuration, including with a stronger sparse
+backend, and no setting of the fusion parameters recovers the loss; for the
+distilled context the drop from 0.600 to 0.450 in recall@10 is the only
+difference in this study whose bootstrap interval excludes zero. Distillation is
+also uneven across strata: the student beats the teacher on multi-hop queries
+and on template-like documents, and trails it on semantic queries and on tables,
+which are hard for both models.
+
+The resulting configuration is a single dense index of contextualized chunks,
+built once per document on the device that later serves the queries; there are
+no API calls at ingest, and no reranker or lexical fusion at query time. On a
+laptop GPU it answers roughly twenty-five queries per second.
+
+\subsection{Data and code availability}
+\label{sec:availability}
+
+The contextual chunk dataset is available at
+\url{https://huggingface.co/datasets/p4ulbr4dl3y/ru-contextual-chunks} and
+the distilled model at
+\url{https://huggingface.co/p4ulbr4dl3y/qwen3-0.6b-contextual-chunks}. The
+retrieval harness, the query set and the scripts that generate every table and
+figure in this paper are available at
+\url{https://github.com/p4ulbr4dl3y/contextual-chunks}.
