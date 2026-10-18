@@ -18,7 +18,8 @@ import os
 import re
 import sys
 import time
-from typing import Any, Awaitable, Callable
+from collections.abc import Awaitable, Callable
+from typing import Any
 
 import httpx
 
@@ -92,7 +93,7 @@ class Teacher:
         self.usage: collections.Counter = collections.Counter()
         self._client: httpx.AsyncClient | None = None
 
-    async def __aenter__(self) -> "Teacher":
+    async def __aenter__(self) -> Teacher:
         base_url, api_key, headers = load_credentials()
         headers = {"Authorization": f"Bearer {api_key}", **headers}
         self._client = httpx.AsyncClient(base_url=base_url, headers=headers, timeout=180.0)

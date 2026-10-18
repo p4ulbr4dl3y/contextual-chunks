@@ -16,14 +16,19 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 from contextual_chunks import paths
-from contextual_chunks.queries.build import (df_table, is_identifier, jaccard,
-                                             max_ngram, stem_ws, words)
+from contextual_chunks.queries.build import (
+    df_table,
+    is_identifier,
+    jaccard,
+    max_ngram,
+    stem_ws,
+    words,
+)
 from contextual_chunks.queries.metrics import Ranking, doc_of, gold_groups, metrics
 from contextual_chunks.retrieval.corpus import load
 from contextual_chunks.retrieval.sparse import RankBM25
@@ -43,7 +48,8 @@ def main() -> int:
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
 
-    rows = [json.loads(l) for l in args.inp.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = [json.loads(line) for line in args.inp.read_text(encoding="utf-8").splitlines()
+            if line.strip()]
     chunks = load()
     by_idx = {c.idx: c for c in chunks}
     df = df_table(chunks)

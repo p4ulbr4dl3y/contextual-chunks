@@ -29,7 +29,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import random
 import re
 import statistics
@@ -104,8 +103,8 @@ def strip_think(text: str) -> str:
 # data
 # ---------------------------------------------------------------------------
 def load_per_row() -> dict[str, dict]:
-    return {json.loads(l)["id"]: json.loads(l)
-            for l in PER_ROW.read_text(encoding="utf-8").splitlines() if l.strip()}
+    return {json.loads(line)["id"]: json.loads(line)
+            for line in PER_ROW.read_text(encoding="utf-8").splitlines() if line.strip()}
 
 
 def load_rows(n: int) -> list[dict]:
@@ -320,7 +319,7 @@ def summarize() -> int:
     # significance: each quantization against f16 (paired bootstrap over the same rows)
     base = _load_f1("f16")
     if base:
-        lines += ["## Significance of differences from f16 (paired bootstrap, n=%d)" % len(base), "",
+        lines += [f"## Significance of differences from f16 (paired bootstrap, n={len(base)})", "",
                   "| comparison | Δ word-F1 | 95% CI |", "|---|---:|---|"]
         for label in [r["label"] for r in runs if r["label"] != "f16"]:
             other = _load_f1(label)
@@ -359,9 +358,10 @@ def build_summary(recs: list[dict], file_mb: float, np: int, prompt_cache: bool)
     ys = [r["prefill_sec"] for r in recs]
     n = len(xs)
     mx, my = sum(xs) / n, sum(ys) / n
-    b = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
+    b = (sum((x - mx) * (y - my) for x, y in zip(xs, ys, strict=False))
+         / sum((x - mx) ** 2 for x in xs))
     a = my - b * mx
-    ss_res = sum((y - (a + b * x)) ** 2 for x, y in zip(xs, ys))
+    ss_res = sum((y - (a + b * x)) ** 2 for x, y in zip(xs, ys, strict=False))
     ss_tot = sum((y - my) ** 2 for y in ys)
     r2 = 1 - ss_res / ss_tot if ss_tot else 0.0
 

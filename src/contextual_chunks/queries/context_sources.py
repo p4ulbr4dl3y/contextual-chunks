@@ -49,7 +49,7 @@ def main() -> int:
               "| arm | " + " | ".join(lbl for _, lbl in METRICS) + " | p50 ms |",
               "|---|" + "---|" * (len(METRICS) + 1)]
     for src, label in ((t, "teacher"), (s, "student")):
-        for arm, rep in src["arms"].items():
+        for _arm, rep in src["arms"].items():
             m = rep["metrics"]
             lines.append(f"| {rep['name']} ({label}) | "
                          + " | ".join(fmt(m[k]) for k, _ in METRICS)

@@ -21,7 +21,12 @@ from pathlib import Path
 import numpy as np
 
 from contextual_chunks.queries.ablate import (
-    PROMPTS, QUERIES, RESULTS, load_arm_vectors, norm_rows, top_k_ids,
+    PROMPTS,
+    QUERIES,
+    RESULTS,
+    load_arm_vectors,
+    norm_rows,
+    top_k_ids,
 )
 from contextual_chunks.queries.metrics import Ranking, doc_of, gold_groups, metrics
 from contextual_chunks.retrieval.config import arm
@@ -70,7 +75,8 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=RESULTS / "breakdown_by_stratum.md")
     args = ap.parse_args()
 
-    qs = [json.loads(l) for l in QUERIES.read_text(encoding="utf-8").splitlines() if l.strip()]
+    qs = [json.loads(line) for line in QUERIES.read_text(encoding="utf-8").splitlines()
+          if line.strip()]
     qs = [q for q in qs if not q.get("reject") and q.get("q")]
     print(f"queries: {len(qs)}")
 
@@ -94,7 +100,7 @@ def main() -> int:
     all_q = [q["qid"] for q in qs]
     mf, mg = sub(all_q)
 
-    lines = [f"# Retrieval breakdown by stratum (F teacher vs G student)", "",
+    lines = ["# Retrieval breakdown by stratum (F teacher vs G student)", "",
              f"queries {len(qs)}, dense-only, d={args.dim or 1024}, instruction {args.prompt.upper()}",
              "", "| strata | n | F R@10 | G R@10 | Δ | F MRR@10 | G MRR@10 | Δ |",
              "|---|---|---|---|---|---|---|---|",

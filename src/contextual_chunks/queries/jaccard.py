@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import json
 import statistics
-import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -34,7 +33,7 @@ def main() -> int:
     values: list[float] = []
     for doc_chunks in by_doc.values():
         doc_chunks.sort(key=lambda c: c.idx)
-        for left, right in zip(doc_chunks, doc_chunks[1:]):
+        for left, right in zip(doc_chunks, doc_chunks[1:], strict=False):
             values.append(jaccard(set(left.text("chunk").split()), set(right.text("chunk").split())))
 
     report = {

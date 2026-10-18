@@ -18,7 +18,6 @@ import sys
 import time
 from pathlib import Path
 
-
 from contextual_chunks import paths
 from contextual_chunks.queries.metrics import Ranking, doc_of, gold_groups, metrics
 from contextual_chunks.retrieval.config import BM25_BACKENDS, arm
@@ -57,7 +56,8 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
 
-    rows = [json.loads(l) for l in args.queries.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = [json.loads(line) for line in args.queries.read_text(encoding="utf-8").splitlines()
+            if line.strip()]
     good = [r for r in rows if not r.get("reject") and r.get("q")]
     if args.stratified:
         import random
@@ -124,7 +124,7 @@ def main() -> int:
                "rerank_p50_ms": pct([t.get("rerank_ms", 0) for t in timings], 50),
                "total_mean_ms": round(statistics.fmean(t["total_ms"] for t in timings), 1)}
         per_query = []
-        for r, rk in zip(usable, rankings):
+        for r, rk in zip(usable, rankings, strict=False):
             qid = r["qid"]
             mm = metrics([rk], {qid: groups[qid]}, idx_to_doc, {qid: gold_doc[qid]},
                          k_max=args.top_k)

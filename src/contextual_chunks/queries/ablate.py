@@ -19,14 +19,13 @@ from pathlib import Path
 
 import numpy as np
 
-
 from contextual_chunks import paths
 from contextual_chunks.queries.metrics import Ranking, doc_of, gold_groups, metrics
 from contextual_chunks.retrieval import index as index_mod
 from contextual_chunks.retrieval.config import arm
-from contextual_chunks.retrieval.models import EMB_QUERY_PROMPT
 from contextual_chunks.retrieval.corpus import load
 from contextual_chunks.retrieval.dense import make_embedder
+from contextual_chunks.retrieval.models import EMB_QUERY_PROMPT
 from contextual_chunks.retrieval.sparse import RankBM25
 
 PROMPT_RU = ("Инструкция: по поисковому запросу найди фрагменты, "
@@ -57,7 +56,7 @@ def load_arm_vectors(cfg, backend: str = "mlx", tag: str = "full"):
 def rrf(rank_lists: list[list[int]], k: int, weights: list[float] | None = None) -> list[int]:
     score: dict[int, float] = {}
     w = weights or [1.0] * len(rank_lists)
-    for rl, wi in zip(rank_lists, w):
+    for rl, wi in zip(rank_lists, w, strict=False):
         for pos, idx in enumerate(rl, start=1):
             score[idx] = score.get(idx, 0.0) + wi / (k + pos)
     return [i for i, _ in sorted(score.items(), key=lambda kv: -kv[1])]
@@ -99,7 +98,8 @@ def main() -> int:
     texts = [p["text"] for p in payload]
     print(f"vectors: {vecs.shape}, texts {len(texts)}")
 
-    qs = [json.loads(l) for l in QUERIES.read_text(encoding="utf-8").splitlines() if l.strip()]
+    qs = [json.loads(line) for line in QUERIES.read_text(encoding="utf-8").splitlines()
+          if line.strip()]
     qs = [q for q in qs if not q.get("reject") and q.get("q")]
     print(f"queries: {len(qs)}")
 
@@ -164,7 +164,7 @@ def main() -> int:
               "| variant | R@1 | R@5 | R@10 | R@50 | MRR@10 | nDCG@10 | docR@10 | miss@50 |",
               "|---|---|---|---|---|---|---|---|---|"]
     dense_ranks = []
-    for i, q in enumerate(qs):
+    for i, _q in enumerate(qs):
         scores = vecs @ qvecs["en"][i]
         dense_ranks.append(top_k_ids(scores, ids, args.pool))
     combos = [("dense-only", [dense_ranks]), ("BM25-only", [bm25_ranks])]

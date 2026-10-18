@@ -19,7 +19,6 @@ import sys
 import time
 from pathlib import Path
 
-
 from contextual_chunks import paths
 from contextual_chunks.queries.metrics import Ranking, doc_of, gold_groups, metrics
 from contextual_chunks.retrieval import index as index_mod
@@ -43,7 +42,8 @@ def main() -> int:
     cfg = arm("A").with_(bm25="fastembed")
     chunks = load(context_source="teacher")
     texts = [c.text("chunk") for c in chunks]
-    qs = [json.loads(l) for l in QUERIES.read_text(encoding="utf-8").splitlines() if l.strip()]
+    qs = [json.loads(line) for line in QUERIES.read_text(encoding="utf-8").splitlines()
+          if line.strip()]
     qs = [q for q in qs if not q.get("reject") and q.get("q")]
     groups = gold_groups(chunks, [(q["qid"], q["gold_idx"]) for q in qs])
     idx_to_doc = doc_of(chunks)
@@ -100,10 +100,10 @@ def main() -> int:
     for name, key in (("A flat / RRF", "A"), ("B ctx / RRF", "B")):
         for label, src in (("rank_bm25", full), ("fastembed", fev)):
             a = src["arms"][key]
-            m, l = a["metrics"], a["latency"]
+            m, item = a["metrics"], a["latency"]
             lines.append(f"| {name} | {label} | {m['recall@10']:.3f} | {m['mrr@10']:.3f} | "
                          f"{m['ndcg@10']:.3f} | {m['doc_recall@10']:.3f} | "
-                         f"{l['total_p50_ms']:.0f} |")
+                         f"{item['total_p50_ms']:.0f} |")
     lines += ["", "## Conclusion", "",
               f"* the fastembed backend gives better BM25 ranking (R@10 "
               f"{m_fe['recall@10']:.3f} vs {m_rb['recall@10']:.3f}) and a better hybrid "

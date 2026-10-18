@@ -43,8 +43,8 @@ def write(name: str, lines: list[str]) -> None:
 
 # ---------------------------------------------------------------- T1 dataset
 def t1_dataset() -> None:
-    rows = [json.loads(l) for l in (ROOT / "data/interim/labeled_dataset_metadata.jsonl")
-            .read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = [json.loads(line) for line in (ROOT / "data/interim/labeled_dataset_metadata.jsonl")
+            .read_text(encoding="utf-8").splitlines() if line.strip()]
     import collections
     cats = collections.Counter(r["category"] for r in rows)
     docs = len({r["doc_id"] for r in rows})
@@ -94,7 +94,7 @@ def t1_dataset() -> None:
         lines += [
             r"\midrule",
             f"Train / validation chunks & {split['train']} / {split['val']} \\\\",
-            f"Split unit & \\texttt{{window\\_hash}} \\\\",
+            "Split unit & \\texttt{window\\_hash} \\\\",
         ]
     lines += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
     write("t1_dataset", lines)
@@ -180,7 +180,6 @@ def t3b_rerank_subset() -> None:
     labels["G"] = r"\textbf{G: distilled, dense-only}"
     arms = load("retrieval_eval_strat60.json")["arms"]
     order = ["A", "B", "E", "F", "G", "H", "C", "D"]
-    strat = load("retrieval_eval_strat60.json")
     lines = [
         r"\begin{table}[t]",
         r"\centering",
@@ -222,9 +221,10 @@ def t4_latency() -> None:
         r"\midrule",
     ]
     for k in order:
-        l = arms[k]["latency"]
-        lines.append(f"{ARM_LABELS[k]} & {l['total_p50_ms']:.0f} & {l['total_p95_ms']:.0f} & "
-                     f"{l['embed_p50_ms']:.0f} " + r"\\")
+        item = arms[k]["latency"]
+        lines.append(f"{ARM_LABELS[k]} & {item['total_p50_ms']:.0f} & "
+                     f"{item['total_p95_ms']:.0f} & "
+                     f"{item['embed_p50_ms']:.0f} " + r"\\")
     lines += [
         r"\bottomrule",
         r"\end{tabular}",
@@ -248,14 +248,14 @@ def t5_ingest() -> None:
         r"\toprule",
         r" & Teacher (API) & Student (on-device) \\",
         r"\midrule",
-        f"Model & \\texttt{{deepseek-v4.1-flash}} & \\texttt{{Qwen3-0.6B}} with LoRA \\\\",
+        "Model & \\texttt{deepseek-v4.1-flash} & \\texttt{Qwen3-0.6B} with LoRA \\\\",
         f"Wall-clock (h) & {th['latency_sec_total_hours']:.2f} & {st['wall_hours']:.2f} \\\\",
         f"Per chunk, median (s) & {th['latency_sec_median']:.2f} & {st['sec_per_chunk_median']:.2f} \\\\",
         f"Prefill (h) & -- & {st['prefill_hours']:.2f} \\\\",
         f"Decode (h) & -- & {st['decode_hours']:.2f} \\\\",
         f"Output tokens (med./max) & -- & {st['out_tokens']['median']}/{st['out_tokens']['max']} \\\\",
         f"Cost (USD) & {bold('\\$' + format(th['cost_usd_total'], '.2f'))} & {bold('\\$0')} \\\\",
-        f"Data leaves device & yes & no \\\\",
+        "Data leaves device & yes & no \\\\",
         r"\bottomrule",
         r"\end{tabular}",
         r"\end{table}",
@@ -294,7 +294,7 @@ def t6_ablations() -> None:
     ]
     for title, keys, labels in groups:
         lines.append(r"\multicolumn{5}{l}{\emph{" + title + r"}} \\")
-        for key, lab in zip(keys, labels):
+        for key, lab in zip(keys, labels, strict=False):
             mf, mg = a[key], g[key]
             lines.append(f"\\quad {lab} & {f3(mf['recall@10'])} & {f3(mf['mrr@10'])} & "
                          f"{f3(mg['recall@10'])} & {f3(mg['mrr@10'])} \\\\")

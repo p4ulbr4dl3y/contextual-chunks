@@ -7,13 +7,13 @@ both sides of the train/val boundary.
     .venv/bin/python -m contextual_chunks.dataset.export_hf --repo-id user/name --push     # requires HF_TOKEN
 """
 
-import os
-import json
 import argparse
-import collections
+import json
+import os
+
+from datasets import Dataset, DatasetDict
 
 from contextual_chunks import paths
-from datasets import Dataset, DatasetDict
 
 CARD = """---
 task_categories:
@@ -53,7 +53,7 @@ def main():
     ap.add_argument("--seed", type=int, default=3407)
     a = ap.parse_args()
 
-    rows = [json.loads(l) for l in open(a.inp, encoding="utf-8")]
+    rows = [json.loads(line) for line in open(a.inp, encoding="utf-8")]
     if not rows:
         raise SystemExit(f"{a.inp} is empty")
 

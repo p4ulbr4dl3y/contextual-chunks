@@ -16,22 +16,22 @@ Usage:
     .venv/bin/python -m contextual_chunks.dataset.chunks --out chunks_unlabeled.jsonl
 """
 
+import argparse
+import collections
+import glob
+import hashlib
+import json
 import os
 import re
-import glob
-import json
-import argparse
-import hashlib
-import collections
 
 from contextual_chunks import paths
 from contextual_chunks.dataset.prompts import (
-    extract_document_text,
     chunk_text,
-    normalize_text,
-    looks_like_table,
-    table_parts,
+    extract_document_text,
     is_junk_table,
+    looks_like_table,
+    normalize_text,
+    table_parts,
 )
 from contextual_chunks.dataset.tokenizer import count_tokens, split_by_tokens
 

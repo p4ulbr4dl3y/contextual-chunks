@@ -13,10 +13,9 @@ Usage:
     .venv/bin/python -m contextual_chunks.dataset.reorder --check
 """
 
-import sys
-import json
 import argparse
 import collections
+import json
 
 from contextual_chunks import paths
 
@@ -52,7 +51,7 @@ def main():
     a = ap.parse_args()
 
     if a.check:
-        rows = [json.loads(l) for l in open(a.out, encoding="utf-8")]
+        rows = [json.loads(line) for line in open(a.out, encoding="utf-8")]
         blocks = check(rows, a.out)
         print(f"OK: {len(rows)} rows, {blocks} contiguous document blocks in {a.out}")
         return
@@ -75,7 +74,7 @@ def main():
                 total += 1
                 windows.add((rec["doc_id"], rec.get("window_index", 0)))
 
-    rows = [json.loads(l) for l in open(a.out, encoding="utf-8")]
+    rows = [json.loads(line) for line in open(a.out, encoding="utf-8")]
     blocks = check(rows, a.out)
 
     print("=== REORDER FOR CACHE ===")

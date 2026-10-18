@@ -201,7 +201,7 @@ def main() -> int:
         t_mlx, ids_mlx, dtypes = mlx_generate(out, ids_list, args.verify_tokens)
         log(f"  [mlx {args.dtype}]       {t_mlx.strip()[:200]}")
         same = 0
-        for a, b in zip(ids_torch, ids_mlx):
+        for a, b in zip(ids_torch, ids_mlx, strict=False):
             if a != b:
                 break
             same += 1

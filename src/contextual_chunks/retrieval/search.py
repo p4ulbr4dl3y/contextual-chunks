@@ -176,7 +176,7 @@ class Searcher:
             t0 = time.perf_counter()
             pairs = [(query, h.text) for h in hits]
             scores = self.reranker.score(pairs)
-            for h, s in zip(hits, scores):
+            for h, s in zip(hits, scores, strict=False):
                 h.rerank_score = float(s)
             hits.sort(key=lambda h: (-h.rerank_score, h.idx))
             for pos, h in enumerate(hits, 1):

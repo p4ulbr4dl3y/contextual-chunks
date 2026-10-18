@@ -23,7 +23,7 @@ def manual_rrf(rankings: list[list[str]], k: int = 60, weights: list[float] | No
         weights = [1.0] * len(rankings)
     assert len(weights) == len(rankings)
     scores: dict[str, float] = {}
-    for ranking, w in zip(rankings, weights):
+    for ranking, w in zip(rankings, weights, strict=False):
         if w <= 0:
             continue
         for pos, _id in enumerate(ranking):

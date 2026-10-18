@@ -23,15 +23,18 @@ from __future__ import annotations
 
 import json
 import os
-from functools import lru_cache
 
 import mlx.core as mx
 import numpy as np
-from huggingface_hub import snapshot_download
 from mlx_lm.utils import _get_classes, load_tokenizer
 
-from contextual_chunks.retrieval.models import (EMB_MODEL, EMB_QUERY_PROMPT, RRK_MODEL, Reranker,
-                                          bucket_indices)
+from contextual_chunks.retrieval.models import (
+    EMB_MODEL,
+    EMB_QUERY_PROMPT,
+    RRK_MODEL,
+    Reranker,
+    bucket_indices,
+)
 
 MLX_DTYPE = {"bf16": mx.bfloat16, "bfloat16": mx.bfloat16, "fp16": mx.float16,
              "float16": mx.float16, "fp32": mx.float32, "float32": mx.float32}

@@ -32,12 +32,12 @@ import time
 from collections import Counter
 from pathlib import Path
 
+from snowballstemmer import stemmer
 
 from contextual_chunks import paths
-from contextual_chunks.queries.teacher import MODELS, Teacher
+from contextual_chunks.queries.teacher import Teacher
 from contextual_chunks.retrieval.corpus import Chunk, load
 from contextual_chunks.retrieval.sparse import words
-from snowballstemmer import stemmer  # noqa: E402
 
 OUT_DEFAULT = Path(paths.QUERIES)
 GENERATORS = [g for g in os.environ.get("GEN_ALIASES", "mimo,qwen").split(",") if g]
@@ -281,7 +281,7 @@ async def stage_para(teacher: Teacher, store: Store) -> None:
         async with sem:
             # paraphrase and judging are simple tasks: the free mimo does them
             retry = ""
-            for attempt in range(3):
+            for _attempt in range(3):
                 out, meta = await teacher.ask_json(
                     "mimo", PARA_PROMPT.format(question=r["q_raw"], retry=retry))
                 r["para_meta"] = meta

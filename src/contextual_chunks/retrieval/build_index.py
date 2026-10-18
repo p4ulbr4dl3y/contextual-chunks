@@ -18,8 +18,7 @@ from pathlib import Path
 from contextual_chunks import paths
 from contextual_chunks.retrieval import corpus as corpus_mod
 from contextual_chunks.retrieval import index as index_mod
-from contextual_chunks.retrieval.config import (BM25_BACKENDS, INDEX_ROOT, ARMS,
-                                                 RetrievalConfig)
+from contextual_chunks.retrieval.config import ARMS, BM25_BACKENDS, RetrievalConfig
 
 RESULTS = Path(paths.RESULTS)
 

@@ -20,7 +20,6 @@ from pathlib import Path
 
 from contextual_chunks import paths
 
-
 DATA = Path(paths.LABELED)
 MODEL = Path(paths.MLX_CACHE) / "qwen3-0.6b-contextual-chunks-bfloat16"
 OUT = Path(paths.STUDENT_CONTEXT)
@@ -51,7 +50,7 @@ def build_windows(rows: list[dict]) -> list[list[dict]]:
     for r in rows:
         by[r["window_hash"]].append(r)
     out = []
-    for wh, group in by.items():
+    for _wh, group in by.items():
         group.sort(key=lambda r: r["chunk_index"])
         out.append(group)
     out.sort(key=lambda g: (g[0]["doc_id"], g[0]["window_hash"]))
@@ -75,11 +74,12 @@ def main() -> int:
     from mlx_lm import load, stream_generate
     from mlx_lm.models.cache import make_prompt_cache, trim_prompt_cache
 
-    rows = [json.loads(l) for l in args.data.read_text(encoding="utf-8").splitlines() if l.strip()]
+    data_text = args.data.read_text(encoding="utf-8")
+    rows = [json.loads(line) for line in data_text.splitlines() if line.strip()]
     done_ids: set[str] = set()
     if args.resume and args.out.exists():
-        done_ids = {json.loads(l)["id"] for l in args.out.read_text(encoding="utf-8").splitlines()
-                    if l.strip()}
+        out_text = args.out.read_text(encoding="utf-8")
+        done_ids = {json.loads(line)["id"] for line in out_text.splitlines() if line.strip()}
         print(f"resume: {len(done_ids)} chunks already done")
         rows = [r for r in rows if r["id"] not in done_ids]
     windows = build_windows(rows)
@@ -137,7 +137,7 @@ def main() -> int:
         print(f"window of {len(group)} chunks, common prefix {pref} tokens")
         cached = run_window(group, all_ids, make_prompt_cache(model))
         ok = 0
-        for r, ids, (text, n, ttft, sec, fed) in zip(group, all_ids, cached):
+        for r, ids, (text, _n, ttft, _sec, fed) in zip(group, all_ids, cached, strict=False):
             plain, pn, _, _ = gen(ids)
             same = text.strip() == plain.strip()
             ok += same
@@ -152,11 +152,11 @@ def main() -> int:
     done = 0
     t_start = time.perf_counter()
     total_out = 0
-    for wi, group in enumerate(windows):
+    for _wi, group in enumerate(windows):
         all_ids = [ids_of(r["prompt"]) for r in group]
         pref = common_prefix_len(all_ids)
         results = run_window(group, all_ids, make_prompt_cache(model))
-        for r, ids, (text, n, ttft, sec, fed) in zip(group, all_ids, results):
+        for r, ids, (text, n, ttft, sec, _fed) in zip(group, all_ids, results, strict=False):
             rec = {"id": r["id"], "doc_id": r["doc_id"], "chunk_index": r["chunk_index"],
                    "window_hash": r["window_hash"], "category": r["category"],
                    "is_table": r.get("is_table"), "chunk_tokens": r.get("chunk_tokens"),

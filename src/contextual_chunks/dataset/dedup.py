@@ -15,14 +15,14 @@ Inputs are rewritten in place (atomically, with `.bak` backups unless --no-backu
     .venv/bin/python -m contextual_chunks.dataset.dedup --dry-run
 """
 
-import os
-import re
-import sys
-import json
-import shutil
-import hashlib
 import argparse
 import collections
+import hashlib
+import json
+import os
+import re
+import shutil
+import sys
 
 from contextual_chunks import paths
 

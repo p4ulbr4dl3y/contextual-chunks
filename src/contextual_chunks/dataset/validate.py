@@ -17,11 +17,11 @@ Usage:
     .venv/bin/python -m contextual_chunks.dataset.validate --in chunks_unlabeled.jsonl --out dataset_ready_for_labeling.jsonl
 """
 
-import re
-import sys
-import json
 import argparse
 import collections
+import json
+import re
+import sys
 
 from contextual_chunks import paths
 from contextual_chunks.dataset.tokenizer import count_tokens

@@ -10,9 +10,11 @@ import pathlib
 import sys
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.ticker import FuncFormatter  # noqa: E402
+
 from contextual_chunks import paths
 
 RES = pathlib.Path(paths.RESULTS)
@@ -104,7 +106,6 @@ def fig_breakeven() -> None:
     t_student = ing["student_ingest"]["wall_hours"]
     t_teacher = ing["teacher_baseline"]["latency_sec_total_hours"]
     docs = ing["corpus"]["docs"]
-    cost_teacher = ing["teacher_baseline"]["cost_usd_total"]
 
     strat = load("retrieval_eval_strat60.json")["arms"]
     t_q_dense = strat["F"]["latency"]["total_p50_ms"] / 1000 / 3600
@@ -112,7 +113,6 @@ def fig_breakeven() -> None:
 
     qs = [10 ** e for e in range(1, 6)]
     D = 500
-    scale = D / docs
 
     def total(t_ing_per_doc, t_q, q):
         return D * t_ing_per_doc + q * t_q

@@ -11,12 +11,12 @@ Exit code 1 if anything fails, so it can gate the pipeline in CI.
     .venv/bin/python -m contextual_chunks.dataset.audit --all          # auto-discovers the stages
 """
 
+import argparse
+import collections
+import json
 import os
 import re
 import sys
-import json
-import argparse
-import collections
 
 from contextual_chunks import paths
 from contextual_chunks.dataset.tokenizer import count_tokens

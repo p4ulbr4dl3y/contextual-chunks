@@ -25,7 +25,6 @@ import argparse
 import hashlib
 import json
 import socket
-import sys
 import urllib.request
 from pathlib import Path
 

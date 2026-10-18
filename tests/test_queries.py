@@ -11,9 +11,19 @@ from pathlib import Path
 
 import pytest
 
-from contextual_chunks.queries.build import (Store, df_table, doc_head, jaccard,
-                                             max_ngram, neighbours_text, pick_docs,
-                                             pick_targets, stage_filter, stem_ws, words)
+from contextual_chunks.queries.build import (
+    Store,
+    df_table,
+    doc_head,
+    jaccard,
+    max_ngram,
+    neighbours_text,
+    pick_docs,
+    pick_targets,
+    stage_filter,
+    stem_ws,
+    words,
+)
 from contextual_chunks.queries.teacher import parse_json
 from contextual_chunks.retrieval.corpus import load
 
@@ -80,7 +90,7 @@ def test_pick_targets(chunks) -> None:
 
 def test_type_routing(chunks) -> None:
     print("\n[ok_for_type: chunk routing]")
-    from contextual_chunks.queries.build import digit_ratio, is_identifier, ok_for_type
+    from contextual_chunks.queries.build import digit_ratio, ok_for_type
     tables = [c for c in chunks if c.is_table]
     plain = [c for c in chunks if not c.is_table and digit_ratio(c) < 0.25]
     numeric = [c for c in chunks if digit_ratio(c) > 0.3]
@@ -140,7 +150,6 @@ def test_filter(chunks, tmp_path: Path) -> None:
     other_doc = next(d for d in by_doc if d != doc_id)
     foreign = by_doc[other_doc][3]                      # we take the answer from a FOREIGN document
     df = df_table(chunks)
-    gold_stems = set(stem_ws(gold.chunk))
     # leak = identifier: a long digit string with low df
     rare_word = next(w for w in words(" ".join(c.chunk for c in chunks[:400]))
                      if is_identifier(w) and df[stem_ws(w)[0]] <= 2)

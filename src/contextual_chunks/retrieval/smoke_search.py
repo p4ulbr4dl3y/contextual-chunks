@@ -12,11 +12,10 @@ from __future__ import annotations
 import argparse
 import sys
 import time
-from pathlib import Path
 
 from contextual_chunks.retrieval import corpus as corpus_mod
 from contextual_chunks.retrieval import index as index_mod
-from contextual_chunks.retrieval.config import BASE, ARMS, RetrievalConfig
+from contextual_chunks.retrieval.config import ARMS, BASE
 from contextual_chunks.retrieval.dense import make_embedder, make_reranker
 from contextual_chunks.retrieval.fuse import overlap_at_k
 from contextual_chunks.retrieval.search import Searcher
@@ -91,8 +90,8 @@ def main() -> int:
             tq.append(T["total_ms"])
             print(f"  Q: {q}")
             show(hits, args.top)
-            print(f"     embed {T['embed_ms']:.1f}ms | fuse {T['fuse_ms']:.1f}ms"
-                  f"{' | rerank %.1fms' % T['rerank_ms'] if 'rerank_ms' in T else ''}"
+            rerank = f" | rerank {T['rerank_ms']:.1f}ms" if "rerank_ms" in T else ""
+            print(f"     embed {T['embed_ms']:.1f}ms | fuse {T['fuse_ms']:.1f}ms{rerank}"
                   f" | total {T['total_ms']:.1f}ms")
         timings_by_arm[cfg.name] = tq
         print(f"  -- query latency: p50 {sorted(tq)[len(tq)//2]:.1f}ms "
@@ -117,7 +116,7 @@ def main() -> int:
     if not FastEmbedBM25.available():
         print("\n=== BM25 backends: skipped (fastembed Qdrant/bm25 not in the cache, "
               "network without a proxy required) ===")
-        print("\n=== query latency summary (n=%d, without warmup) ===" % len(queries))
+        print(f"\n=== query latency summary (n={len(queries)}, without warmup) ===")
         for name, ts in timings_by_arm.items():
             print(f"  {name:28s} p50 {sorted(ts)[len(ts)//2]:7.1f}ms  max {max(ts):7.1f}ms")
         return 0
@@ -136,7 +135,7 @@ def main() -> int:
     print(f"  rank_bm25+snowball vs fastembed Qdrant/bm25: overlap@5 {sum(o5)/len(o5):.2f}, "
           f"overlap@20 {sum(o20)/len(o20):.2f}")
 
-    print("\n=== query latency summary (n=%d, without warmup) ===" % len(queries))
+    print(f"\n=== query latency summary (n={len(queries)}, without warmup) ===")
     for name, ts in timings_by_arm.items():
         print(f"  {name:28s} p50 {sorted(ts)[len(ts)//2]:7.1f}ms  max {max(ts):7.1f}ms")
     return 0

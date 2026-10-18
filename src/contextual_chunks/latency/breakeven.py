@@ -45,7 +45,6 @@ def main() -> int:
     args = ap.parse_args()
 
     ing = load("student_context_ingest.json")
-    ev_full = load("retrieval_eval_full.json")
     ev_strat = load("retrieval_eval_strat60.json")
 
     t_student_ingest = ing["student_ingest"]["wall_hours"] * 3600
@@ -73,7 +72,7 @@ def main() -> int:
              f"({t_teacher_ingest:.0f} s per corpus) | same |",
              f"| ingest cost, teacher API | ${cost_teacher:.4f} per corpus "
              f"(${cost_teacher / DOCS:.5f}/doc) | same |",
-             f"| ingest cost, student | $0 | - |",
+             "| ingest cost, student | $0 | - |",
              f"| query, F (ctx, dense-only) | {t_f * 1000:.0f} ms | `retrieval_eval_strat60.json` |",
              f"| query, G (student-ctx, dense-only) | {t_g * 1000:.0f} ms | same |",
              f"| query, B (ctx, RRF) | {t_b * 1000:.0f} ms | same |",

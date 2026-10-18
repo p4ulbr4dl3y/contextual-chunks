@@ -17,9 +17,6 @@ Run:  .venv/bin/python -m contextual_chunks.retrieval.check_models [--backend to
 """
 
 import argparse
-import sys
-from pathlib import Path
-
 
 import numpy as np
 

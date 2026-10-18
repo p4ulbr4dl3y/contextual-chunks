@@ -48,14 +48,14 @@ import glob
 import os
 import re
 
-from contextual_chunks import paths
-
 from datasets import load_dataset
 
+from contextual_chunks import paths
+
 try:
+    from trl import SFTConfig, SFTTrainer
     from unsloth import FastLanguageModel
     from unsloth.chat_templates import train_on_responses_only
-    from trl import SFTTrainer, SFTConfig
 except ImportError as exc:  # unsloth ships Linux wheels only, the run happened on Colab
     raise SystemExit(
         f"the training stack is not installed ({exc}).\n"

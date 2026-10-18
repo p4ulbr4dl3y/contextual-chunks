@@ -18,7 +18,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 from contextual_chunks import paths
 from contextual_chunks.queries.metrics import Ranking, doc_of, gold_groups, metrics
 from contextual_chunks.retrieval.config import BASE
@@ -41,7 +40,8 @@ def main() -> int:
                     help="defaults to the shared harness cache (one corpus pass for all runs)")
     args = ap.parse_args()
 
-    rows = [json.loads(l) for l in args.inp.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = [json.loads(line) for line in args.inp.read_text(encoding="utf-8").splitlines()
+            if line.strip()]
     good = [r for r in rows if not r.get("reject") and r.get("q")]
     if args.limit:
         good = good[: args.limit]

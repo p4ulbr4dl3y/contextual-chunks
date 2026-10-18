@@ -17,17 +17,17 @@ Resume-safe: already labelled ids are skipped, outputs are appended to.
     .venv/bin/python -m contextual_chunks.dataset.label --fresh             # ignore existing outputs
 """
 
+import argparse
+import asyncio
+import collections
+import json
 import os
 import sys
-import json
 import time
-import asyncio
-import argparse
-import collections
-
-from contextual_chunks import paths
 
 import httpx
+
+from contextual_chunks import paths
 
 AGENT_DIR = os.environ.get("PI_AGENT_DIR", os.path.expanduser("~/.pi/agent"))
 MODELS_JSON = os.path.join(AGENT_DIR, "models.json")
@@ -180,7 +180,7 @@ async def label(input_file, sft_file, meta_file, start, limit, concurrency, fres
     for rec in todo:
         docs.setdefault(rec["doc_id"], []).append(rec)
 
-    print(f"=== TEACHER LABELLING ===")
+    print("=== TEACHER LABELLING ===")
     print(f"model:        {MODEL_NAME}  (reasoning off, max_tokens={MAX_TOKENS})")
     print(f"rows in slice:{len(rows)}   already labelled: {len(rows) - len(todo)}   todo: {len(todo)}")
     print(f"documents:    {len(docs)}   concurrency: {concurrency}")

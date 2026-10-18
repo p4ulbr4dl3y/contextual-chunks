@@ -109,7 +109,7 @@ class RetrievalConfig:
     def to_dict(self) -> dict:
         return asdict(self)
 
-    def with_(self, **kw) -> "RetrievalConfig":
+    def with_(self, **kw) -> RetrievalConfig:
         return replace(self, **kw)
 
 

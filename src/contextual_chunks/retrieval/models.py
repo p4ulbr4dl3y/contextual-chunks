@@ -134,7 +134,7 @@ class Embedder:
         return F.normalize(emb, p=2, dim=1)
 
     def encode(self, texts: list[str], batch_size: int | None = None, prompt: str | None = None,
-               normalize: bool = True, sort_by_length: bool = True, cache: "EmbedCache | None" = None,
+               normalize: bool = True, sort_by_length: bool = True, cache: EmbedCache | None = None,
                dim: int | None = None, max_length: int | None = None,
                token_budget: int | None = None):
         """-> np.ndarray [n, out_dim] float32 (L2-normalized).

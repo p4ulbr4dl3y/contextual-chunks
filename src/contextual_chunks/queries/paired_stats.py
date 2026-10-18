@@ -16,7 +16,6 @@ import argparse
 import json
 import random
 import statistics
-import sys
 from pathlib import Path
 
 from contextual_chunks import paths

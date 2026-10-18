@@ -28,7 +28,6 @@ from __future__ import annotations
 import argparse
 import json
 import statistics
-import sys
 from pathlib import Path
 
 from contextual_chunks import paths
@@ -180,9 +179,10 @@ def main() -> int:
             "prefix_ratio_mean": round(statistics.fmean(ratios), 4),
         }
 
-    labels = ["bf16", *sorted(pool.keys() - {"bf16"}, key=lambda l: -(runs[l]["file_mb"] or 0))]
+    labels = ["bf16",
+              *sorted(pool.keys() - {"bf16"}, key=lambda item: -(runs[item]["file_mb"] or 0))]
     print("\nshare of common prefix of min length, inside llama.cpp and against the reference\n")
-    print(f"{'':8}" + "".join(f"{l:>9}" for l in labels))
+    print(f"{'':8}" + "".join(f"{item:>9}" for item in labels))
     matrix: dict[str, dict[str, float]] = {}
     stats: dict[tuple[str, str], dict] = {}
     for a in labels:
@@ -194,7 +194,7 @@ def main() -> int:
             stats[(a, b)] = pair(a, b)
             row[b] = stats[(a, b)]["prefix_ratio_mean"]
         matrix[a] = row
-        print(f"{a:8}" + "".join(f"{row[l]:>9.4f}" for l in labels))
+        print(f"{a:8}" + "".join(f"{row[item]:>9.4f}" for item in labels))
 
     named = ("bf16 vs f16", "f16 vs q8_0", "f16 vs q6_k", "f16 vs q5_k_m", "f16 vs q4_k_m",
              "q8_0 vs q4_k_m", "bf16 vs q8_0")

@@ -13,14 +13,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import resource
 import sys
 import time
 from pathlib import Path
 
-
-import numpy as np
 import torch
 
 from contextual_chunks import paths
@@ -159,8 +156,12 @@ def main() -> int:
            "|---:|---:|---:|---:|---:|---:|"]
     for bs in bs_grid:
         for ml in ml_grid:
-            fn = lambda: embedder.encode(emb_texts, batch_size=bs, prompt="", max_length=ml)
-            warm = lambda: embedder.encode(emb_texts[:8], batch_size=bs, prompt="", max_length=ml)
+            def fn(bs=bs, ml=ml):
+                return embedder.encode(emb_texts, batch_size=bs, prompt="", max_length=ml)
+
+            def warm(bs=bs, ml=ml):
+                return embedder.encode(emb_texts[:8], batch_size=bs, prompt="", max_length=ml)
+
             sec = measure(fn, warm)
             rate = n_emb / sec
             record(kind="embed", batch=bs, max_len=ml, sec=sec, rate=rate, unit="texts/s")
@@ -205,10 +206,15 @@ def main() -> int:
             return _buckets(var_lens, tb or 10**12, bs)
 
         waste = padding_waste(var_lens, batches_for())
-        fn = lambda: embedder.encode(var_texts, batch_size=bs, prompt="", max_length=1024,
-                                     sort_by_length=sort, token_budget=tb)
-        warm = lambda: embedder.encode(var_texts[:8], batch_size=bs, prompt="", max_length=1024,
-                                      sort_by_length=sort, token_budget=tb)
+
+        def fn(bs=bs, sort=sort, tb=tb):
+            return embedder.encode(var_texts, batch_size=bs, prompt="", max_length=1024,
+                                   sort_by_length=sort, token_budget=tb)
+
+        def warm(bs=bs, sort=sort, tb=tb):
+            return embedder.encode(var_texts[:8], batch_size=bs, prompt="", max_length=1024,
+                                   sort_by_length=sort, token_budget=tb)
+
         sec = measure(fn, warm)
         rate = n_emb / sec
         base = base or rate
@@ -257,8 +263,12 @@ def main() -> int:
         for doc_tok, pairs in ((600, pairs600), (1200, pairs1200)):
             if doc_tok not in docs_grid:
                 continue
-            fn = lambda: rrk.score(pairs, batch_size=bs)
-            warm = lambda: rrk.score(pairs[:4], batch_size=bs)
+            def fn(pairs=pairs, bs=bs):
+                return rrk.score(pairs, batch_size=bs)
+
+            def warm(pairs=pairs, bs=bs):
+                return rrk.score(pairs[:4], batch_size=bs)
+
             sec = measure(fn, warm)
             rate = n_rrk / sec
             record(kind="rerank", batch=bs, doc_tokens=doc_tok, sec=sec, rate=rate)

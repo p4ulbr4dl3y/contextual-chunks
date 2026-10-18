@@ -7,7 +7,7 @@ PY ?= .venv/bin/python
 GGUF_DIR ?= $(HOME)/.cache/contextual-chunks/gguf
 
 .PHONY: help install pipeline chunks prompts reorder audit label dedup export \
-        train-smoke export-mlx convert-mlx check-models test \
+        train-smoke export-mlx convert-mlx check-models test lint \
         index eval-queries eval-student index-student index-full smoke-retrieval \
         student-context queries audit-queries bench-models bench-models-mlx ablate \
         breakeven rerank-pool breakdown bm25-backends eval-strat60 paired-stats jaccard \
@@ -64,6 +64,9 @@ check-models: ## gate: the Qwen3-Embedding/Reranker wrappers match the model car
 
 test: ## unit tests of the query set (no network)
 	$(PY) -m pytest tests -q
+
+lint: ## ruff check over the package and the tests
+	$(PY) -m ruff check src tests
 
 # --- retrieval harness ---------------------------------------------------
 

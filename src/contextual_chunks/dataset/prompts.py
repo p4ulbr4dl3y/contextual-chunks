@@ -1,8 +1,10 @@
-import os
 import re
-from bs4 import BeautifulSoup
+
 import docx
+from bs4 import BeautifulSoup
+
 from contextual_chunks.dataset.tokenizer import count_tokens, split_by_tokens
+
 
 def parse_docx(path):
     try:
@@ -12,7 +14,7 @@ def parse_docx(path):
             text = p.text.strip()
             if text:
                 lines.append(text)
-        
+
         # Tables to markdown
         for table in doc.tables:
             table_lines = []
@@ -23,17 +25,17 @@ def parse_docx(path):
                     table_lines.append("|" + "|".join(["---"] * len(row_cells)) + "|")
             if table_lines:
                 lines.append("\n" + "\n".join(table_lines) + "\n")
-        
+
         return "\n\n".join(lines)
-    except Exception as e:
+    except Exception:
         return ""
 
 def parse_html(path):
     try:
-        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        with open(path, encoding="utf-8", errors="ignore") as f:
             html = f.read()
         soup = BeautifulSoup(html, "lxml")
-        
+
         # Format tables to markdown
         for table in soup.find_all("table"):
             rows = []
@@ -49,29 +51,29 @@ def parse_html(path):
                 else:
                     md_table = "\n\n" + "\n".join(rows) + "\n\n"
                 table.replace_with(md_table)
-        
+
         text = soup.get_text(separator="\n")
         # Clean multiple newlines
         text = re.sub(r"\n{3,}", "\n\n", text)
         return text.strip()
-    except Exception as e:
+    except Exception:
         return ""
 
 def parse_xml(path):
     try:
-        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        with open(path, encoding="utf-8", errors="ignore") as f:
             xml = f.read()
         soup = BeautifulSoup(xml, "xml")
         text = soup.get_text(separator="\n", strip=True)
         text = re.sub(r"\n{3,}", "\n\n", text)
         return text
-    except Exception as e:
+    except Exception:
         return ""
 
 def extract_document_text(path):
     with open(path, "rb") as f:
         head = f.read(1024)
-    
+
     if head.startswith(b"%PDF"):
         return "" # Scans skip for ground truth
     elif b"word/" in head or head.startswith(b"PK\x03\x04"):
@@ -176,7 +178,8 @@ def chunk_text(text, max_tokens=1200, overlap_tokens=0, max_table_rows=8,
                 continue
             header, body = table_parts(block)
             prefix = header if repeat_table_header else []
-            join = lambda rows: "\n".join(prefix + rows) if prefix else "\n".join(rows)
+            def join(rows, prefix=prefix):
+                return "\n".join(prefix + rows) if prefix else "\n".join(rows)
             header_tokens = count_tokens("\n".join(prefix))
             budget = max(max_table_tokens - header_tokens, 1)
             cur_rows, cur_tokens = [], 0

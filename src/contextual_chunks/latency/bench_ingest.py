@@ -18,13 +18,13 @@ from pathlib import Path
 
 from contextual_chunks import paths
 
-
 DATA = Path(paths.LABELED)
 MODEL = Path(paths.MLX_CACHE) / "qwen3-0.6b-contextual-chunks-bfloat16"
 
 
 def load_rows() -> list[dict]:
-    return [json.loads(l) for l in DATA.read_text(encoding="utf-8").splitlines() if l.strip()]
+    text = DATA.read_text(encoding="utf-8")
+    return [json.loads(line) for line in text.splitlines() if line.strip()]
 
 
 def stratified(rows: list[dict], n: int) -> list[dict]:
@@ -64,12 +64,10 @@ def main() -> int:
         t0 = time.perf_counter()
         n_out = 0
         ttft = None
-        text = ""
         for resp in stream_generate(model, tok, ids, max_tokens=args.max_tokens):
             if ttft is None:
                 ttft = time.perf_counter() - t0
             n_out = resp.generation_tokens
-            text = resp.text
         total = time.perf_counter() - t0
         decode_sec = total - (ttft or 0)
         rec = {"chunk_index": r["chunk_index"], "doc_id": r["doc_id"],
@@ -85,10 +83,10 @@ def main() -> int:
               f"({rec['decode_tok_per_sec']} tok/s), out {n_out} tok")
 
     prefill = [r["prefill_sec"] for r in out_rows]
-    per_chunk = [r["total_sec"] for r in out_rows]
     prompt_toks = [r["prompt_tokens"] for r in out_rows]
     # extrapolation: mean time per 1k prompt tokens * total corpus tokens
-    sec_per_1k = statistics.fmean(p / (t / 1000) for p, t in zip(prefill, prompt_toks))
+    sec_per_1k = statistics.fmean(p / (t / 1000)
+                                  for p, t in zip(prefill, prompt_toks, strict=False))
     decode_per_chunk = statistics.fmean(r["decode_sec"] for r in out_rows)
     est_prefill = sec_per_1k * total_prompt_tokens / 1000
     est_total = est_prefill + decode_per_chunk * corpus_n
